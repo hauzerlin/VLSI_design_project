@@ -1,0 +1,23 @@
+* "simulator" "HSPICE" 
+* "version" "J-2014.09-SP2-2 64-BIT"
+* "format" "HSP"
+* "rundate" "19:10:08 11/19/2022 "
+* "netlist" "test_dff.sp "
+* "runtitle" "**test dff**"
+* time =    0.            
+* temperature =   25.0000        
+*** BEGIN: Saved Operating Point ***                     
+.option 
++ gmindc=   1.0000p       
+.nodeset
++ vclk =   0.            
++ vdd =   1.0000        
++ vout1 = 944.6358m       
++ vout2 = 388.2202m       
++ vtest =   0.            
++ xtest.node1 = 999.9910m       
++ xtest.node2 = 778.0776m       
++ xtest.node3 =   1.9087u       
++ xtest.nodea = 999.9821m       
++ xtest.nodeb = 999.9920m       
+***   END: Saved Operating Point ***                     
