@@ -3,21 +3,27 @@
        3 xdff2.
        4 xnor1.
        5 xnor2.
-       6 xinv_vq2.
-       7 xnor3.
-       8 xnor4.
-       9 xtap_buff3.
-      10 xinv.xinv1.
-      11 xinv.xinv2.
-      12 xinv.xinv3.
-      13 xinv.xinv4.
-      14 xinv.xinv5.
-      15 xinv.xinv6.
-      16 xinv.xinv7.
-      17 xinv.xinv8.
-      18 xdff1.xinv.
-      19 xdff1.xinv1.
-      20 xdff1.xinv2.
-      21 xdff2.xinv.
-      22 xdff2.xinv1.
-      23 xdff2.xinv2.
+       6 xnor3.
+       7 xnor4.
+       8 xtap_buff3.
+       9 xdff6.
+      10 xinv6.
+      11 xtap_buff6.
+      12 xdiv2.
+      13 xdiv4.
+      14 xdiv8.
+      15 xtap_buff8.
+      16 xinv.xinv1.
+      17 xinv.xinv2.
+      18 xinv.xinv3.
+      19 xinv.xinv4.
+      20 xinv.xinv5.
+      21 xinv.xinv6.
+      22 xinv.xinv7.
+      23 xinv.xinv8.
+      24 xdff1.xinv.
+      25 xdff2.xinv.
+      26 xdff6.xinv.
+      27 xdiv2.xinv.
+      28 xdiv4.xinv.
+      29 xdiv8.xinv.

@@ -34,24 +34,30 @@
         3 xdff2.                          dff                1.00 
         4 xnor1.                          nor                1.00 
         5 xnor2.                          nor                1.00 
-        6 xinv_vq2.                       inv                1.00 
-        7 xnor3.                          nor                1.00 
-        8 xnor4.                          nor                1.00 
-        9 xtap_buff3.                     tap_buffer3        1.00 
-       10 xinv.xinv1.                     inv                1.00 
-       11 xinv.xinv2.                     inv                1.00 
-       12 xinv.xinv3.                     inv                1.00 
-       13 xinv.xinv4.                     inv                1.00 
-       14 xinv.xinv5.                     inv                1.00 
-       15 xinv.xinv6.                     inv                1.00 
-       16 xinv.xinv7.                     inv                1.00 
-       17 xinv.xinv8.                     inv                1.00 
-       18 xdff1.xinv.                     inv                1.00 
-       19 xdff1.xinv1.                    inv                1.00 
-       20 xdff1.xinv2.                    inv                1.00 
-       21 xdff2.xinv.                     inv                1.00 
-       22 xdff2.xinv1.                    inv                1.00 
-       23 xdff2.xinv2.                    inv                1.00 
+        6 xnor3.                          nor                1.00 
+        7 xnor4.                          nor                1.00 
+        8 xtap_buff3.                     tap_buffer3        1.00 
+        9 xdff6.                          dff                1.00 
+       10 xinv6.                          inv                1.00 
+       11 xtap_buff6.                     tap_buffer6        1.00 
+       12 xdiv2.                          dff                1.00 
+       13 xdiv4.                          dff                1.00 
+       14 xdiv8.                          dff                1.00 
+       15 xtap_buff8.                     tap_buffer8        1.00 
+       16 xinv.xinv1.                     inv                1.00 
+       17 xinv.xinv2.                     inv                1.00 
+       18 xinv.xinv3.                     inv                1.00 
+       19 xinv.xinv4.                     inv                1.00 
+       20 xinv.xinv5.                     inv                1.00 
+       21 xinv.xinv6.                     inv                1.00 
+       22 xinv.xinv7.                     inv                1.00 
+       23 xinv.xinv8.                     inv                1.00 
+       24 xdff1.xinv.                     inv                1.00 
+       25 xdff2.xinv.                     inv                1.00 
+       26 xdff6.xinv.                     inv                1.00 
+       27 xdiv2.xinv.                     inv                1.00 
+       28 xdiv4.xinv.                     inv                1.00 
+       29 xdiv8.xinv.                     inv                1.00 
 1****** HSPICE -- J-2014.09-SP2-2 64-BIT (Apr 17 2015) win64 ******             
  ******  
  **vlsi design middle project**
@@ -585,8 +591,8 @@
     KF =      0 
     TRS =      0 
     TRD =      0 
-  **info** (middle_porject.sp:60) DC voltage reset to initial transient source value              in source        0:vclk                new dc=  0.0000D+00
- **warning** (nmos:mn2) Warning:  Acde = 0.318645 may be too small in BSIM4 model with w=1.4778e-006 l=9e-008.
+  **info** (middle_porject.sp:54) DC voltage reset to initial transient source value              in source        0:vclk                new dc=  0.0000D+00
+ **warning** (nmos:mn1) Warning:  Acde = 0.318645 may be too small in BSIM4 model with w=2e-007 l=9e-008.
 
  **warning** Node specified unrecognized for element     0:vout3            branch; output ignored
 
@@ -612,20 +618,30 @@
  ****** operating point status is all       simulation time is     0.     
      node    =voltage       node    =voltage       node    =voltage
 
- + 0:net3    = 999.9880m  0:node1   = 999.9546m  0:node2   = 805.9183n
- + 0:node3   = 999.9503m  0:node_nor= 999.9546m  0:node_vq1=  16.1766u
- + 0:node_vq2= 999.9892m  0:vclk    =   0.       0:vclk_in =  13.8888u
- + 0:vdd     =   1.0000   0:vout3   =  16.1672u  0:vq1     =  15.5096u
- + 0:vq1_bar = 999.6099m  0:vq2     =  14.0220u  0:vq2_bar = 999.6094m
- + 1:net1    = 999.9881m  1:net2    =  13.6972u  1:net3    = 999.9880m
- + 1:net4    =  13.6972u  1:net5    = 999.9880m  1:net6    =  13.6972u
- + 1:net7    = 999.9880m  2:node1   = 214.7001m  2:node2   =  68.3702m
- + 2:node3   =   2.6219u  2:node_out= 547.3074m  2:node_out= 136.2777m
- + 2:nodea   =   7.2201u  2:nodeb   = 999.9977m  3:node1   = 999.9892m
- + 3:node2   = 778.0750m  3:node3   =   2.6220u  3:node_out= 547.3295m
- + 3:node_out= 136.1918m  3:nodea   = 999.9785m  3:nodeb   = 999.9928m
- + 4:net1    = 999.9773m  5:net1    = 999.9773m  7:net1    = 916.7043m
- + 8:net1    = 999.9751m  9:net2    =  16.7243u  9:net3    = 999.9880m
+ + 0:div2    = 143.1053m  0:div2_bar= 545.6335m  0:div4    = 999.9812m
+ + 0:div4_bar=  17.6504m  0:div8    = 997.3528m  0:div8_bar= 216.5515m
+ + 0:node1   = 999.9546m  0:node2   =   1.6307u  0:node3   = 999.2399m
+ + 0:node_nor= 998.2729m  0:node_vq6= 159.5752m  0:vclk    =   0.     
+ + 0:vclk_in =  13.9783u  0:vdd     =   1.0000   0:vout3   =  16.1672u
+ + 0:vout6   = 999.9907m  0:vout8   = 999.9907m  0:vq1     = 136.5185m
+ + 0:vq1_bar = 547.2461m  0:vq2     = 144.1190m  0:vq2_bar = 545.3973m
+ + 0:vq6     = 542.1026m  0:vq6_bar = 490.2521m  1:net1    = 999.9881m
+ + 1:net2    =  13.6972u  1:net3    = 999.9880m  1:net4    =  13.6972u
+ + 1:net5    = 999.9880m  1:net6    =  13.6972u  1:net7    = 999.9880m
+ + 2:node1   = 215.8447m  2:node2   =  68.3614m  2:node3   =   2.6224u
+ + 2:nodea   =   7.5017u  2:nodeb   = 999.9977m  3:node1   = 999.6092m
+ + 3:node2   = 777.5522m  3:node3   =   2.6117u  3:nodea   = 999.2730m
+ + 3:nodeb   = 999.9928m  4:net1    = 999.1415m  5:net1    = 999.9773m
+ + 6:net1    = 603.2940m  7:net1    = 999.6487m  8:net2    =  17.0265u
+ + 8:net3    = 999.9880m  9:node1   = 999.9771m  9:node2   =   3.0327u
+ + 9:node3   = 369.6803m  9:nodea   =  10.5682m  9:nodeb   = 503.8587m
+ +11:net2    = 231.3623m 11:net3    = 996.8455m 11:net4    =  18.0869u
+ +12:node1   = 539.3505m 12:node2   = 109.4774m 12:node3   =   2.6131u
+ +12:nodea   =  61.3026m 12:nodeb   = 999.9976m 13:node1   = 999.9828m
+ +13:node2   = 680.4590m 13:node3   =  13.2090u 13:nodea   = 999.9629m
+ +13:nodeb   = 999.7794m 14:node1   = 999.9749m 14:node2   =   2.7032u
+ +14:node3   = 167.9047m 14:nodea   =   2.3326m 14:nodeb   = 537.1043m
+ +15:net2    =  17.8575u 15:net3    = 999.9880m 15:net4    =  16.7080u
 
  
 ".opt runlvl= 3" sets ".opt sim_accuracy= 1"  
@@ -652,39 +668,39 @@ SSolve ...
 CT 16 
 Running 1 thread. 
   
-0.1% time = 2.105435 ps ( etc = 0.0 sec, ett = 0.0 sec ) 
+0.1% time = 2.724234 ps ( etc = 0.0 sec, ett = 0.0 sec ) 
 ( wall = 0.0 sec cpu = 0.0 sec s=-1.#IND ) 
-10.0% time = 202.345026 ps ( etc = 0.0 sec, ett = 0.0 sec ) 
+10.0% time = 181.562356 ps ( etc = 0.0 sec, ett = 0.0 sec ) 
 ( wall = 0.0 sec cpu = 0.0 sec s=-1.#IND ) 
-20.0% time = 400.365531 ps ( etc = 0.0 sec, ett = 0.0 sec ) 
+20.0% time = 361.985606 ps ( etc = 0.0 sec, ett = 0.0 sec ) 
 ( wall = 0.0 sec cpu = 0.0 sec s=-1.#IND ) 
-30.0% time = 600.000000 ps ( etc = 0.0 sec, ett = 0.0 sec ) 
+30.0% time = 544.263687 ps ( etc = 0.0 sec, ett = 0.0 sec ) 
 ( wall = 0.0 sec cpu = 0.0 sec s=-1.#IND ) 
-40.0% time = 801.810794 ps ( etc = 0.0 sec, ett = 0.0 sec ) 
+40.0% time = 722.315251 ps ( etc = 0.0 sec, ett = 0.0 sec ) 
 ( wall = 0.0 sec cpu = 0.0 sec s=-1.#IND ) 
-50.0% time = 1.003494 ns ( etc = 0.0 sec, ett = 0.0 sec ) 
+50.0% time = 900.100000 ps ( etc = 0.0 sec, ett = 0.0 sec ) 
 ( wall = 0.0 sec cpu = 0.0 sec s=-1.#IND ) 
-60.0% time = 1.200000 ns ( etc = 0.0 sec, ett = 0.0 sec ) 
+60.0% time = 1.080769 ns ( etc = 0.0 sec, ett = 0.0 sec ) 
 ( wall = 0.0 sec cpu = 0.0 sec s=-1.#IND ) 
-70.0% time = 1.402207 ns ( etc = 0.0 sec, ett = 0.0 sec ) 
+70.0% time = 1.260013 ns ( etc = 0.0 sec, ett = 0.0 sec ) 
 ( wall = 0.0 sec cpu = 0.0 sec s=-1.#IND ) 
-80.0% time = 1.602431 ns ( etc = 0.0 sec, ett = 0.0 sec ) 
+80.0% time = 1.443760 ns ( etc = 0.0 sec, ett = 0.0 sec ) 
 ( wall = 0.0 sec cpu = 0.0 sec s=-1.#IND ) 
-90.0% time = 1.800000 ns ( etc = 0.0 sec, ett = 0.0 sec ) 
+90.0% time = 1.622250 ns ( etc = 0.0 sec, ett = 0.0 sec ) 
 ( wall = 0.0 sec cpu = 0.0 sec s=-1.#IND ) 
-100.0% time = 2.000000 ns ( etc = 0.0 sec, ett = 0.0 sec ) 
+100.0% time = 1.800000 ns ( etc = 0.0 sec, ett = 0.0 sec ) 
 ( wall = 0.0 sec cpu = 0.0 sec s=-1.#IND ) 
  *************************  
  
 Resource Usage for Transient Analysis 
-CPU Time     0.87 sec   
+CPU Time     0.49 sec   
 Peak Memory  0.00 Mb    
   
 Wall Time Statistics:  
   Transient Wall time                   = 1.0000 
-  Transient Wall time per timestep      = 0.0008 
-  Transient Wall time per timestep-node = 2.3715e-006 
-  Total CPU time                       = 0.8710 
+  Transient Wall time per timestep      = 0.0015 
+  Transient Wall time per timestep-node = 2.7236e-006 
+  Total CPU time                       = 0.4890 
   Total CPU time per step              = 0.0007 
  
  
@@ -705,12 +721,12 @@ Wall Time Statistics:
 
 
   ******  Circuit Statistics  ******
-  # nodes       =     339 # elements   =      77
-  # resistors   =       0 # capacitors =       1 # inductors   =       0
+  # nodes       =     561 # elements   =     127
+  # resistors   =       0 # capacitors =       3 # inductors   =       0
   # mutual_inds =       0 # vccs       =       0 # vcvs        =       0
   # cccs        =       0 # ccvs       =       0 # volt_srcs   =       2
   # curr_srcs   =       0 # diodes     =       0 # bjts        =       0
-  # jfets       =       0 # mosfets    =      74 # U elements  =       0
+  # jfets       =       0 # mosfets    =     122 # U elements  =       0
   # T elements  =       0 # W elements =       0 # B elements  =       0
   # S elements  =       0 # P elements =       0 # va device   =       0
   # vector_srcs =       0 # N elements =       0
@@ -719,18 +735,18 @@ Wall Time Statistics:
   ******  Runtime Statistics (seconds)  ******
 
   analysis           time    # points   tot. iter  conv.iter
-  op point           0.06           1         191
-  transient          1.00        2001        2986        1255  rev= 165 
-  readin             0.04
+  op point           0.07           1         200
+  transient          1.00        1801        1579         658  rev= 0 
+  readin             0.03
   errchk             0.01
   setup              0.01
   output             0.00
-           peak memory used         56.70 megabytes 
-           total cpu time            1.00 seconds
-           total elapsed time        1.10 seconds
-           job started at     17:14:34 11/20/2022
-           job ended   at     17:14:35 11/20/2022
+           peak memory used         57.48 megabytes 
+           total cpu time            0.62 seconds
+           total elapsed time        0.66 seconds
+           job started at     23:55:07 11/20/2022
+           job ended   at     23:55:08 11/20/2022
 
 
   lic: Release hspice token(s) 
- lic: total license checkout elapse time:        0.09(s)
+ lic: total license checkout elapse time:        0.04(s)
