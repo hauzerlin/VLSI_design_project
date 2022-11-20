@@ -1,7 +1,7 @@
 * "simulator" "HSPICE" 
 * "version" "J-2014.09-SP2-2 64-BIT"
 * "format" "HSP"
-* "rundate" "21:06:18 11/19/2022 "
+* "rundate" "17:14:34 11/20/2022 "
 * "netlist" "middle_porject.sp "
 * "runtitle" "**vlsi design middle project**"
 * time =    0.            
@@ -10,20 +10,21 @@
 .option 
 + gmindc=   1.0000p       
 .nodeset
++ net3 = 999.9880m       
 + node1 = 999.9546m       
-+ node2 =   1.6310u       
++ node2 = 805.9183n       
 + node3 = 999.9503m       
-+ node_1 = 999.6099m       
-+ node_nor = 998.2836m       
-+ node_vq1 =  13.8301u       
++ node_nor = 999.9546m       
++ node_vq1 =  16.1766u       
++ node_vq2 = 999.9892m       
 + vclk =   0.            
 + vclk_in =  13.8888u       
 + vdd =   1.0000        
 + vout3 =  16.1672u       
-+ vq1 = 136.2789m       
-+ vq1_bar = 547.3074m       
-+ vq2 = 143.8609m       
-+ vq2_bar = 545.4572m       
++ vq1 =  15.5096u       
++ vq1_bar = 999.6099m       
++ vq2 =  14.0220u       
++ vq2_bar = 999.6094m       
 + xinv.net1 = 999.9881m       
 + xinv.net2 =  13.6972u       
 + xinv.net3 = 999.9880m       
@@ -31,19 +32,23 @@
 + xinv.net5 = 999.9880m       
 + xinv.net6 =  13.6972u       
 + xinv.net7 = 999.9880m       
-+ xdff1.node1 = 215.8275m       
-+ xdff1.node2 =  68.3704m       
++ xdff1.node1 = 214.7001m       
++ xdff1.node2 =  68.3702m       
 + xdff1.node3 =   2.6219u       
-+ xdff1.nodea =   7.5001u       
++ xdff1.node_out = 547.3074m       
++ xdff1.node_out1 = 136.2777m       
++ xdff1.nodea =   7.2201u       
 + xdff1.nodeb = 999.9977m       
-+ xdff2.node1 = 999.6116m       
-+ xdff2.node2 = 777.5646m       
-+ xdff2.node3 =   2.6112u       
-+ xdff2.nodea = 999.2773m       
++ xdff2.node1 = 999.9892m       
++ xdff2.node2 = 778.0750m       
++ xdff2.node3 =   2.6220u       
++ xdff2.node_out = 547.3295m       
++ xdff2.node_out1 = 136.1918m       
++ xdff2.nodea = 999.9785m       
 + xdff2.nodeb = 999.9928m       
-+ xnor1.net1 = 999.1468m       
++ xnor1.net1 = 999.9773m       
 + xnor2.net1 = 999.9773m       
-+ xnor3.net1 = 603.3362m       
++ xnor3.net1 = 916.7043m       
 + xnor4.net1 = 999.9751m       
 + xtap_buff3.net2 =  16.7243u       
 + xtap_buff3.net3 = 999.9880m       

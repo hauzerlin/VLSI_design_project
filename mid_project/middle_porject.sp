@@ -1,6 +1,8 @@
 **VLSI Design Middle project**
 
-.inc "D:\1111\VLSI_Design\ptm90.l"
+$.inc "D:\1111\VLSI_Design\ptm90.l"
+.inc "../ptm90.l"
+
 .global vdd gnd
 
 $ circuit describe
@@ -20,10 +22,22 @@ Xdff2 VQ1      vclk VQ2 VQ2_bar dff
 Xnor1 VQ1 VQ2 node_nor nor
 Xnor2 vclk_in vclk_in node1 nor
 
-Xinv1 VQ1 node_1 inv
-Xinv2 node_1 node_vq1 inv
+$Xinv1 VQ1 node_1 inv
+$Xinv2 node_1 node_2 inv
+$Xinv3 node_2 node_3 inv
+$Xinv4 node_3 node_vq1 inv
 
-Xnor3 node1 VQ2_bar node2 nor
+	$Mp1 net2 VQ1 vdd vdd pmos w= 1.6309u l=0.09u
+	$Mn1 net2 VQ1 gnd gnd nmos w= 0.5437u l=0.09u
+	Mp2 net3 VQ1 vdd vdd pmos w= 4.4334u l=0.09u
+	Mn2 net3 VQ1 gnd gnd nmos w= 1.4778u l=0.09u
+	Mp3 node_vq1 net3 vdd vdd pmos w=12.0513u l=0.09u
+	Mn3 node_vq1 net3 gnd gnd nmos w= 4.0171u l=0.09u
+	
+Xinv_vq2 VQ2 node_vq2 inv
+
+$Xnor3 node1 node_vq2 node2 nor
+Xnor3 node1 vq2_bar node2 nor
 Xnor4 node2 node_vq1 node3 nor
 $Xnor4 node2 node_1 node3 nor
 
@@ -33,7 +47,7 @@ Xtap_buff3 node3 vout3 tap_buffer3
 Cbuf3 vout3 gnd 50f
 
 $ clk div by 6
-
+$Xdff6 node3
 
 $ clk div by 8
 
@@ -41,7 +55,9 @@ $ clk div by 8
 
 $ voltage soure and other setting
 vdd  vdd gnd DC 1V
-vclk vclk gnd pulse(0 1  0n 0.001n 0.001n 0.1n  0.2n)
+$vclk vclk gnd pulse(0 1  0n 0.001n 0.001n 0.08n  0.2n)
+$vclk vclk gnd pulse(0 1  0n 0.000625n 0.000625n 0.048n  0.12n)
+vclk vclk gnd pulse(0 1  0n 0.0003125n 0.0003125n 0.024n  0.06n)
 
 $ inverter module 
 .subckt inv in out
@@ -89,11 +105,14 @@ $ dff module
 	Mn2 nodeB nodeA node2 gnd nmos w=0.2u l=0.09u
 	Mn3 node2   clk   gnd gnd nmos w=0.2u l=0.09u
 
-	Mp4 inv_out nodeB vdd vdd pmos w=0.5u l=0.09u
-	Mn4 inv_out clk node3 gnd nmos w=0.2u l=0.09u
+	Mp4 node_out nodeB vdd vdd pmos w=0.5u l=0.09u
+	Mn4 node_out clk node3 gnd nmos w=0.2u l=0.09u
 	Mn5   node3 nodeB gnd gnd nmos w=0.2u l=0.09u
 
-	Xinv inv_out out inv
+	Xinv  node_out node_out1 inv
+	Xinv1  node_out1 inv_out inv
+	Xinv2  inv_out out inv
+
 .ends
 
 $ input-buffer module
@@ -127,6 +146,40 @@ $ tapper-buffer module(div by 3)
 	$Mn6  out net6 gnd gnd nmos w=80.6828 l=0.09u
 .ends tap_buffer3
 
+$ tapper-buffer module(div by 6)
+.subckt tap_buffer6 in out
+	$Xinv_3 in net1 inv
+	Mp1 net2   in vdd vdd pmos w= 1.6309u l=0.09u
+	Mn1 net2  i n gnd gnd nmos w= 0.5437u l=0.09u
+	Mp2 net3 net2 vdd vdd pmos w= 4.4334u l=0.09u
+	Mn2 net3 net2 gnd gnd nmos w= 1.4778u l=0.09u
+	Mp3 net4 net3 vdd vdd pmos w=12.0513u l=0.09u
+	Mn3 net4 net3 gnd gnd nmos w= 4.0171u l=0.09u	
+	Mp4  out net4 vdd vdd pmos w=32.7589u l=0.09u
+	Mn4  out net4 gnd gnd nmos w=10.9196u l=0.09u
+	$Mp5  out net5 vdd vdd pmos w=89.0479u l=0.09u
+	$Mn5  out net5 gnd gnd nmos w=29.6826u l=0.09u
+	$Mp6  out net6 vdd vdd pmos w=242.0573u l=0.09u
+	$Mn6  out net6 gnd gnd nmos w=80.6828 l=0.09u
+.ends tap_buffer6
+
+$ tapper-buffer module(div by 8)
+.subckt tap_buffer8 in out
+	$Xinv_3 in net1 inv
+	Mp1 net2   in vdd vdd pmos w= 1.6309u l=0.09u
+	Mn1 net2  i n gnd gnd nmos w= 0.5437u l=0.09u
+	Mp2 net3 net2 vdd vdd pmos w= 4.4334u l=0.09u
+	Mn2 net3 net2 gnd gnd nmos w= 1.4778u l=0.09u
+	Mp3 net4 net3 vdd vdd pmos w=12.0513u l=0.09u
+	Mn3 net4 net3 gnd gnd nmos w= 4.0171u l=0.09u	
+	Mp4  out net4 vdd vdd pmos w=32.7589u l=0.09u
+	Mn4  out net4 gnd gnd nmos w=10.9196u l=0.09u
+	$Mp5  out net5 vdd vdd pmos w=89.0479u l=0.09u
+	$Mn5  out net5 gnd gnd nmos w=29.6826u l=0.09u
+	$Mp6  out net6 vdd vdd pmos w=242.0573u l=0.09u
+	$Mn6  out net6 gnd gnd nmos w=80.6828 l=0.09u
+.ends tap_buffer8
+
 $ 測量 divider_3 的 falling time、rising time、high level、low level
 $.measure tran fall_time_A  trig V(outA) VAL=0.9   cross=3  targ V(outA) val=0.1  cross=3
 $.measure tran rising_time_A  trig V(outA) VAL=0.1  cross=2  targ V(outA) val=0.9 cross=2
@@ -150,5 +203,3 @@ $ transmission gate module
 .probe v1(vout3)
 .probe v2(VQ2)
 .end
-
-**end**
