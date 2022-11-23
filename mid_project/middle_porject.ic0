@@ -1,7 +1,7 @@
 * "simulator" "HSPICE" 
 * "version" "J-2014.09-SP2-2 64-BIT"
 * "format" "HSP"
-* "rundate" "23:55:07 11/20/2022 "
+* "rundate" "14:29:55 11/21/2022 "
 * "netlist" "middle_porject.sp "
 * "runtitle" "**vlsi design middle project**"
 * time =    0.            

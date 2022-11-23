@@ -1,0 +1,23 @@
+* "simulator" "HSPICE" 
+* "version" "J-2014.09-SP2-2 64-BIT"
+* "format" "HSP"
+* "rundate" "16:11:05 11/19/2022 "
+* "netlist" "test_porject.sp "
+* "runtitle" "**vlsi design middle project**"
+* time =    0.            
+* temperature =   25.0000        
+*** BEGIN: Saved Operating Point ***                     
+.option 
++ gmindc=   1.0000p       
+.nodeset
++ vclk =   0.            
++ vclk_in =  16.1796u       
++ vdd =   1.0000        
++ xinv.net1 = 999.9901m       
++ xinv.net2 =  16.3724u       
++ xinv.net3 = 999.9901m       
++ xinv.net4 =  16.3724u       
++ xinv.net5 = 999.9901m       
++ xinv.net6 =  16.3724u       
++ xinv.net7 = 999.9901m       
+***   END: Saved Operating Point ***                     

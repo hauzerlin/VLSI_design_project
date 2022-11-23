@@ -1,0 +1,76 @@
+ ****** HSPICE -- J-2014.09-SP2-2 64-BIT (Apr 17 2015) win64 ******             
+  Copyright (C) 2014 Synopsys, Inc. All Rights Reserved.                        
+  Unpublished-rights reserved under US copyright laws.
+  This program is protected by law and is subject to the
+  terms and conditions of the license agreement from Synopsys.
+  Use of this program is your acceptance to be bound by the
+  license agreement. HSPICE is the trademark of Synopsys, Inc.
+  Input File: test_dff.sp                                                       
+  Command line options: -i test_dff.sp -o test_dff.lis
+  lic:  
+  lic: FLEXlm: v10.9.8 
+  lic: USER:   Dale                 HOSTNAME: DESKTOP-J7D9945 
+  lic: HOSTID: "38d54701ef19 38d54701ef1a 005056c00001 005056c00008 047f0e22ff7d
+ " PID:      9108 
+  lic: Using FLEXlm license file: 
+  lic: 27000@DESKTOP-J7D9945 
+  lic: Checkout 1 hspice 
+  lic: License/Maintenance for hspice will expire on 30-dec-2023/2019.2019 
+  lic: 1(in_use)/99(total) FLOATING license(s) on SERVER 27000@DESKTOP-J7D9945 
+  lic:   
+ Init: read install configuration file: C:\synopsys\Hspice_J-2014.09-SP2-2\meta.cfg
+  **error** (test_dff.sp:17) Definition of model/subckt "pmos" is not found for the element "mp1". Please specify a defined model/subckt name.
+  **error** (test_dff.sp:18) Definition of model/subckt "pmos" is not found for the element "mp2". Please specify a defined model/subckt name.
+  **error** (test_dff.sp:19) Definition of model/subckt "nmos" is not found for the element "mn1". Please specify a defined model/subckt name.
+  **error** (test_dff.sp:21) Definition of model/subckt "pmos" is not found for the element "mp3". Please specify a defined model/subckt name.
+  **error** (test_dff.sp:22) Definition of model/subckt "nmos" is not found for the element "mn2". Please specify a defined model/subckt name.
+  **error** (test_dff.sp:23) Definition of model/subckt "nmos" is not found for the element "mn3". Please specify a defined model/subckt name.
+  **error** (test_dff.sp:25) Definition of model/subckt "pmos" is not found for the element "mp4". Please specify a defined model/subckt name.
+  **error** (test_dff.sp:26) Definition of model/subckt "nmos" is not found for the element "mn4". Please specify a defined model/subckt name.
+  **error** (test_dff.sp:27) Definition of model/subckt "nmos" is not found for the element "mn5". Please specify a defined model/subckt name.
+
+          ***** job aborted
+1****** HSPICE -- J-2014.09-SP2-2 64-BIT (Apr 17 2015) win64 ******             
+ ******  
+ .inc 'd:\1111\vlsi_design\ptm90.l'
+
+ ****** job statistics summary tnom=  25.000 temp=  25.000 ******
+
+  ******  HSPICE Threads Information  ******
+
+  Command Line Threads Count :     1
+  Available CPU Count        :     8
+  Actual Threads Count       :     1
+
+
+  ******  Circuit Statistics  ******
+  # nodes       =       0 # elements   =      12
+  # resistors   =       0 # capacitors =       0 # inductors   =       0
+  # mutual_inds =       0 # vccs       =       0 # vcvs        =       0
+  # cccs        =       0 # ccvs       =       0 # volt_srcs   =       3
+  # curr_srcs   =       0 # diodes     =       0 # bjts        =       0
+  # jfets       =       0 # mosfets    =       9 # U elements  =       0
+  # T elements  =       0 # W elements =       0 # B elements  =       0
+  # S elements  =       0 # P elements =       0 # va device   =       0
+  # vector_srcs =       0 # N elements =       0
+
+
+  ******  Runtime Statistics (seconds)  ******
+
+  analysis           time    # points   tot. iter  conv.iter
+  op point           0.00           1           0
+  readin             0.02
+  errchk             0.00
+  setup              0.00
+  output             0.00
+
+
+           peak memory used         42.34 megabytes
+           total cpu time            0.02 seconds
+           total elapsed time        0.06 seconds
+           job started at     16:38:11 11/19/2022
+           job ended   at     16:38:11 11/19/2022
+
+
+  lic: Release hspice token(s) 
+ lic: total license checkout elapse time:        0.04(s)

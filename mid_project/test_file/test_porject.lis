@@ -5,13 +5,13 @@
   terms and conditions of the license agreement from Synopsys.
   Use of this program is your acceptance to be bound by the
   license agreement. HSPICE is the trademark of Synopsys, Inc.
-  Input File: middle_porject.sp                                                 
-  Command line options: -i middle_porject.sp -o middle_porject.lis
+  Input File: test_porject.sp                                                   
+  Command line options: -i test_porject.sp -o test_porject.lis
   lic:  
   lic: FLEXlm: v10.9.8 
   lic: USER:   Dale                 HOSTNAME: DESKTOP-J7D9945 
   lic: HOSTID: "38d54701ef19 38d54701ef1a 005056c00001 005056c00008 047f0e22ff7d
- " PID:      17276 
+ " PID:      17280 
   lic: Using FLEXlm license file: 
   lic: 27000@DESKTOP-J7D9945 
   lic: Checkout 1 hspice 
@@ -28,34 +28,14 @@
    number circuitname                     definition         multiplier
         0 main circuit
         1 xinv.                           input_buffer       1.00 
-        2 xdff1.                          dff                1.00 
-        3 xdff2.                          dff                1.00 
-        4 xnor1.                          nor                1.00 
-        5 xnor2.                          nor                1.00 
-        6 xnor3.                          nor                1.00 
-        7 xnor4.                          nor                1.00 
-        8 xtap_buff3.                     tap_buffer3        1.00 
-        9 xdff6.                          dff                1.00 
-       10 xinv6.                          inv                1.00 
-       11 xtap_buff6.                     tap_buffer6        1.00 
-       12 xdiv2.                          dff                1.00 
-       13 xdiv4.                          dff                1.00 
-       14 xdiv8.                          dff                1.00 
-       15 xtap_buff8.                     tap_buffer8        1.00 
-       16 xinv.xinv1.                     inv                1.00 
-       17 xinv.xinv2.                     inv                1.00 
-       18 xinv.xinv3.                     inv                1.00 
-       19 xinv.xinv4.                     inv                1.00 
-       20 xinv.xinv5.                     inv                1.00 
-       21 xinv.xinv6.                     inv                1.00 
-       22 xinv.xinv7.                     inv                1.00 
-       23 xinv.xinv8.                     inv                1.00 
-       24 xdff1.xinv.                     inv                1.00 
-       25 xdff2.xinv.                     inv                1.00 
-       26 xdff6.xinv.                     inv                1.00 
-       27 xdiv2.xinv.                     inv                1.00 
-       28 xdiv4.xinv.                     inv                1.00 
-       29 xdiv8.xinv.                     inv                1.00 
+        2 xinv.xinv1.                     inv                1.00 
+        3 xinv.xinv2.                     inv                1.00 
+        4 xinv.xinv3.                     inv                1.00 
+        5 xinv.xinv4.                     inv                1.00 
+        6 xinv.xinv5.                     inv                1.00 
+        7 xinv.xinv6.                     inv                1.00 
+        8 xinv.xinv7.                     inv                1.00 
+        9 xinv.xinv8.                     inv                1.00 
 1****** HSPICE -- J-2014.09-SP2-2 64-BIT (Apr 17 2015) win64 ******             
  ******  
  **vlsi design middle project**
@@ -589,13 +569,10 @@
     KF =      0 
     TRS =      0 
     TRD =      0 
-  **info** (middle_porject.sp:54) DC voltage reset to initial transient source value              in source        0:vclk                new dc=  0.0000D+00
+  **info** (test_porject.sp:25) DC voltage reset to initial transient source value              in source        0:vclk                new dc=  0.0000D+00
  **warning** (nmos:mn1) Warning:  Acde = 0.318645 may be too small in BSIM4 model with w=2e-007 l=9e-008.
 
- **warning** Node specified unrecognized for element     0:vout3            branch; output ignored
-
-
- **warning** Node specified unrecognized for element     0:vq2              branch; output ignored
+ **warning** Node specified unrecognized for element     0:vclk_in          branch; output ignored
 
   
       
@@ -605,54 +582,22 @@
  ******
  runlvl  = 3         bypass  = 2         
   Opening plot unit= 79
- file=middle_porject.pa0
+ file=test_porject.pa0
 
- **info** dc convergence successful at GMINDC ramping method 
+ **info** dc convergence successful at Newton-Raphson method 
 1****** HSPICE -- J-2014.09-SP2-2 64-BIT (Apr 17 2015) win64 ******             
  ******  
  **vlsi design middle project**
 
  ****** operating point information tnom=  25.000 temp=  25.000 ******
  ****** operating point status is voltage   simulation time is     0.     
-     node    =voltage       node    =voltage       node    =voltage
+    node    =voltage      node    =voltage      node    =voltage
 
- + 0:div2    = 143.1053m  0:div2_bar= 545.6335m  0:div4    = 999.9812m
- + 0:div4_bar=  17.6504m  0:div8    = 997.3528m  0:div8_bar= 216.5515m
- + 0:node1   = 999.9546m  0:node2   =   1.6307u  0:node3   = 999.2399m
- + 0:node_nor= 998.2729m  0:node_vq6= 159.5752m  0:vclk    =   0.     
- + 0:vclk_in =  13.9783u  0:vdd     =   1.0000   0:vout3   =  16.1672u
- + 0:vout6   = 999.9907m  0:vout8   = 999.9907m  0:vq1     = 136.5185m
- + 0:vq1_bar = 547.2461m  0:vq2     = 144.1190m  0:vq2_bar = 545.3973m
- + 0:vq6     = 542.1026m  0:vq6_bar = 490.2521m  1:net1    = 999.9881m
- + 1:net2    =  13.6972u  1:net3    = 999.9880m  1:net4    =  13.6972u
- + 1:net5    = 999.9880m  1:net6    =  13.6972u  1:net7    = 999.9880m
- + 2:node1   = 215.8447m  2:node2   =  68.3614m  2:node3   =   2.6224u
- + 2:nodea   =   7.5017u  2:nodeb   = 999.9977m  3:node1   = 999.6092m
- + 3:node2   = 777.5522m  3:node3   =   2.6117u  3:nodea   = 999.2730m
- + 3:nodeb   = 999.9928m  4:net1    = 999.1415m  5:net1    = 999.9773m
- + 6:net1    = 603.2940m  7:net1    = 999.6487m  8:net2    =  17.0265u
- + 8:net3    = 999.9880m  9:node1   = 999.9771m  9:node2   =   3.0327u
- + 9:node3   = 369.6803m  9:nodea   =  10.5682m  9:nodeb   = 503.8587m
- +11:net2    = 231.3623m 11:net3    = 996.8455m 11:net4    =  18.0869u
- +12:node1   = 539.3505m 12:node2   = 109.4774m 12:node3   =   2.6131u
- +12:nodea   =  61.3026m 12:nodeb   = 999.9976m 13:node1   = 999.9828m
- +13:node2   = 680.4590m 13:node3   =  13.2090u 13:nodea   = 999.9629m
- +13:nodeb   = 999.7794m 14:node1   = 999.9749m 14:node2   =   2.7032u
- +14:node3   = 167.9047m 14:nodea   =   2.3326m 14:nodeb   = 537.1043m
- +15:net2    =  17.8575u 15:net3    = 999.9880m 15:net4    =  16.7080u
+ +0:vclk    =   0.      0:vclk_in =  16.1796u 0:vdd     =   1.0000 
+ +1:net1    = 999.9901m 1:net2    =  16.3724u 1:net3    = 999.9901m
+ +1:net4    =  16.3724u 1:net5    = 999.9901m 1:net6    =  16.3724u
+ +1:net7    = 999.9901m
 
- ******  
- **vlsi design middle project**
-
- ****** transient analysis tnom=  25.000 temp=  25.000 ******
- fall_time_a=  26.3610p  targ= 741.1900p   trig= 714.8290p
- rising_time_a=  27.3180p  targ= 546.0894p   trig= 518.7714p
- high_level_a= 145.7684p  targ= 991.7187p   trig= 845.9503p
- low_level_a=  77.5198p  targ= 818.7099p   trig= 741.1900p
- period_a= 288.0499p  targ= 728.0872p   trig= 440.0373p
- freqa=   3.4716g
- dutycycle_a= 506.0527m
- avg_power=   1.6384m  from=   0.          to=   2.0000n
 
           ***** job concluded
 1****** HSPICE -- J-2014.09-SP2-2 64-BIT (Apr 17 2015) win64 ******             
@@ -669,12 +614,12 @@
 
 
   ******  Circuit Statistics  ******
-  # nodes       =     561 # elements   =     127
-  # resistors   =       0 # capacitors =       3 # inductors   =       0
+  # nodes       =      75 # elements   =      18
+  # resistors   =       0 # capacitors =       0 # inductors   =       0
   # mutual_inds =       0 # vccs       =       0 # vcvs        =       0
   # cccs        =       0 # ccvs       =       0 # volt_srcs   =       2
   # curr_srcs   =       0 # diodes     =       0 # bjts        =       0
-  # jfets       =       0 # mosfets    =     122 # U elements  =       0
+  # jfets       =       0 # mosfets    =      16 # U elements  =       0
   # T elements  =       0 # W elements =       0 # B elements  =       0
   # S elements  =       0 # P elements =       0 # va device   =       0
   # vector_srcs =       0 # N elements =       0
@@ -683,19 +628,19 @@
   ******  Runtime Statistics (seconds)  ******
 
   analysis           time    # points   tot. iter  conv.iter
-  op point           0.07           1         206
-  transient          0.62        2001        2572         950 rev=         0
+  op point           0.00           1           4
+  transient          0.19         601        5316        1886 rev=        91
   readin             0.02
-  errchk             0.01
-  setup              0.01
+  errchk             0.00
+  setup              0.00
   output             0.00
 
 
-           peak memory used         44.80 megabytes
-           total cpu time            0.72 seconds
-           total elapsed time        0.76 seconds
-           job started at     14:29:55 11/21/2022
-           job ended   at     14:29:56 11/21/2022
+           peak memory used         43.66 megabytes
+           total cpu time            0.20 seconds
+           total elapsed time        0.25 seconds
+           job started at     16:11:05 11/19/2022
+           job ended   at     16:11:06 11/19/2022
 
 
   lic: Release hspice token(s) 

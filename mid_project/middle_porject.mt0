@@ -1,0 +1,8 @@
+$DATA1 SOURCE='HSPICE' VERSION='J-2014.09-SP2-2 64-BIT'
+.TITLE '**vlsi design middle project**'
+ fall_time_a      rising_time_a    high_level_a     low_level_a     
+ period_a         freqa            dutycycle_a      avg_power       
+ temper           alter#          
+  2.636e-011       2.732e-011       1.458e-010       7.752e-011     
+  2.880e-010       3.472e+009         0.5061         1.638e-003     
+   25.0000        1               

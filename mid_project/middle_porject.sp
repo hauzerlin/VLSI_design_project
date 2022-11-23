@@ -51,7 +51,9 @@ $vclk vclk gnd pulse(0 1  0n 0.001n 0.001n 0.05n  0.12n)
 
 $vclk vclk gnd pulse(0 1  0n 0.001n 0.001n 0.0432n  0.12n)
 $vclk vclk gnd pulse(0 1  0n 0.0008n 0.0008n 0.042n  0.1n)
-vclk vclk gnd pulse(0 1  0n 0.0001n 0.0001n 0.0475n  0.1n)$ok
+vclk vclk gnd pulse(0 1  0n 0.0001n 0.0001n 0.0472n  0.1n)
+$vclk vclk gnd pulse(0 1  0n 0.0001n 0.0001n 0.0475n  0.1n)$ok
+
 $vclk vclk gnd pulse(0 1  0n 0.0008	n 0.0008n 0.044n  0.09n) 
 $vclk vclk gnd pulse(0 1  0n 0.00008n 0.00008n 0.025n  0.06n)
 
@@ -147,10 +149,7 @@ $ tapper-buffer module(div by 6)
 	Mn3 net4 net3 gnd gnd nmos w= 4.0171u l=0.09u	
 	Mp4  out net4 vdd vdd pmos w=32.7589u l=0.09u
 	Mn4  out net4 gnd gnd nmos w=10.9196u l=0.09u
-	$Mp5  out net5 vdd vdd pmos w=89.0479u l=0.09u
-	$Mn5  out net5 gnd gnd nmos w=29.6826u l=0.09u
-	$Mp6  out net6 vdd vdd pmos w=242.0573u l=0.09u
-	$Mn6  out net6 gnd gnd nmos w=80.6828 l=0.09u
+	
 .ends tap_buffer6
 
 $ tapper-buffer module(div by 8)
@@ -164,20 +163,17 @@ $ tapper-buffer module(div by 8)
 	Mn3 net4 net3 gnd gnd nmos w= 4.0171u l=0.09u	
 	Mp4  out net4 vdd vdd pmos w=32.7589u l=0.09u
 	Mn4  out net4 gnd gnd nmos w=10.9196u l=0.09u
-	$Mp5  out net5 vdd vdd pmos w=89.0479u l=0.09u
-	$Mn5  out net5 gnd gnd nmos w=29.6826u l=0.09u
-	$Mp6  out net6 vdd vdd pmos w=242.0573u l=0.09u
-	$Mn6  out net6 gnd gnd nmos w=80.6828 l=0.09u
 .ends tap_buffer8
 
 $ 測量 divider_3 的 falling time、rising time、high level、low level
-$.measure tran fall_time_A  trig V(vout3) VAL=0.9   cross=3  targ V(vout3) val=0.1  cross=3
-$.measure tran rising_time_A  trig V(vout3) VAL=0.1  cross=2  targ V(vout3) val=0.9 cross=2
-$.measure tran high_level_A  trig V(vout3) VAL=0.9   cross=3  targ V(vout3) val=0.9  cross=4
-$.measure tran low_level_A  trig V(vout3) VAL=0.1   cross=2  targ V(vout3) val=0.1  cross=3
-$.measure tran period_A trig V(vout3) VAL=0.5  cross=2 targ V(vout3) val=0.5 cross=4
-$.measure tran freqA param='1/period_a'
-$.measure tran DutyCycle_A param ='high_level_A/period_A'
+.measure tran fall_time_A  trig V(vout3) VAL=0.9   cross=4  targ V(vout3) val=0.1  cross=4
+.measure tran rising_time_A  trig V(vout3) VAL=0.1  cross=3  targ V(vout3) val=0.9 cross=3
+.measure tran high_level_A  trig V(vout3) VAL=0.9   cross=5  targ V(vout3) val=0.9  cross=6
+.measure tran low_level_A  trig V(vout3) VAL=0.1   cross=4  targ V(vout3) val=0.1  cross=5
+.measure tran period_A trig V(vout3) VAL=0.5  cross=2 targ V(vout3) val=0.5 cross=4
+.measure tran freqA param='1/period_a'
+.measure tran DutyCycle_A param ='high_level_A/period_A'
+.measure tran avg_power avg power
 
 $ transmission gate module
 .subckt tran_gate in out en_p en_n
@@ -187,7 +183,7 @@ $ transmission gate module
 	Xinv en en_b vdd gnd inv
 .ends
 
-.tran 0.001ns 1.8ns
+.tran 0.001ns 2ns
 .option post
 
 .probe v1(vout3)

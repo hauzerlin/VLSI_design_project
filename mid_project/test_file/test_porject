@@ -1,0 +1,36 @@
+**VLSI Design Middle project**
+
+.inc "D:\1111\VLSI_Design\ptm90.l"
+.global vdd gnd
+
+$ circuit describe
+
+Xinv vclk vin inv
+
+
+$ voltage soure and other setting
+vdd  vdd gnd DC 1V
+vclk vclk gnd pulse( 0 1  0n 0.01n 0.01n 0.1n  0.2n)
+
+$ inverter module 
+.subckt inv in out
+	Mp1 out in vdd vdd pmos w=0.5u l=0.09u
+	Mn1 out in gnd gnd nmos w=0.2u l=0.09u
+.ends
+
+$ transmission gate module
+.subckt tran_gate in out en_p en_n
+	Mp out en_p  in  vdd pmos W=0.5u L=0.09u
+	Mn in  en_n out  gnd nmos W=0.2u L=0.09u
+	
+	Xinv en en_b vdd gnd inv
+.ends
+
+.tran 0.01ns 6ns
+.option post
+
+.probe v0(vy0)
+
+.end
+
+**end**
