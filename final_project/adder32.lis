@@ -1,0 +1,1082 @@
+ ****** HSPICE -- J-2014.09-SP2-2 64-BIT (Apr 17 2015) win64 ******             
+  Copyright (C) 2014 Synopsys, Inc. All Rights Reserved.                        
+  Unpublished-rights reserved under US copyright laws.
+  This program is protected by law and is subject to the
+  terms and conditions of the license agreement from Synopsys.
+  Use of this program is your acceptance to be bound by the
+  license agreement. HSPICE is the trademark of Synopsys, Inc.
+  Input File: adder32.sp                                                        
+  Command line options: -i adder32.sp -o adder32.lis
+  lic:  
+  lic: FLEXlm: v10.9.8 
+  lic: USER:   Dale                 HOSTNAME: DESKTOP-J7D9945 
+  lic: HOSTID: "38d54701ef19 38d54701ef1a 005056c00001 005056c00008" PID:      1
+ 2084 
+  lic: Using FLEXlm license file: 
+  lic: 27000@DESKTOP-J7D9945 
+  lic: Checkout 1 hspice 
+  lic: License/Maintenance for hspice will expire on 30-dec-2023/2019.2019 
+  lic: 1(in_use)/99(total) FLOATING license(s) on SERVER 27000@DESKTOP-J7D9945 
+  lic:   
+ Init: read install configuration file: C:\synopsys\Hspice_J-2014.09-SP2-2\meta.cfg
+1****** HSPICE -- J-2014.09-SP2-2 64-BIT (Apr 17 2015) win64 ******             
+ ******  
+ *** adder32 using static manchester carry adder ***
+
+ ****** circuit name directory
+ circuit number to circuit name directory
+   number circuitname                     definition         multiplier
+        0 main circuit
+        1 xadd.                           add                1.00 
+        2 xadd.xcell4_1.                  manchester_static_4bit
+                                                                 1.00 
+        3 xadd.xcell4_2.                  manchester_static_4bit
+                                                                 1.00 
+        4 xadd.xcell4_3.                  manchester_static_4bit
+                                                                 1.00 
+        5 xadd.xcell4_4.                  manchester_static_4bit
+                                                                 1.00 
+        6 xadd.xcell4_5.                  manchester_static_4bit
+                                                                 1.00 
+        7 xadd.xcell4_6.                  manchester_static_4bit
+                                                                 1.00 
+        8 xadd.xcell4_7.                  manchester_static_4bit
+                                                                 1.00 
+        9 xadd.xcell4_8.                  manchester_static_4bit
+                                                                 1.00 
+       10 xadd.xsum0.                     xor                1.00 
+       11 xadd.xsum1.                     xor                1.00 
+       12 xadd.xsum2.                     xor                1.00 
+       13 xadd.xsum3.                     xor                1.00 
+       14 xadd.xsum4.                     xor                1.00 
+       15 xadd.xsum5.                     xor                1.00 
+       16 xadd.xsum6.                     xor                1.00 
+       17 xadd.xsum7.                     xor                1.00 
+       18 xadd.xsum8.                     xor                1.00 
+       19 xadd.xsum9.                     xor                1.00 
+       20 xadd.xsum10.                    xor                1.00 
+       21 xadd.xsum11.                    xor                1.00 
+       22 xadd.xsum12.                    xor                1.00 
+       23 xadd.xsum13.                    xor                1.00 
+       24 xadd.xsum14.                    xor                1.00 
+       25 xadd.xsum15.                    xor                1.00 
+       26 xadd.xsum16.                    xor                1.00 
+       27 xadd.xsum17.                    xor                1.00 
+       28 xadd.xsum18.                    xor                1.00 
+       29 xadd.xsum19.                    xor                1.00 
+       30 xadd.xsum20.                    xor                1.00 
+       31 xadd.xsum21.                    xor                1.00 
+       32 xadd.xsum22.                    xor                1.00 
+       33 xadd.xsum23.                    xor                1.00 
+       34 xadd.xsum24.                    xor                1.00 
+       35 xadd.xsum25.                    xor                1.00 
+       36 xadd.xsum26.                    xor                1.00 
+       37 xadd.xsum27.                    xor                1.00 
+       38 xadd.xsum28.                    xor                1.00 
+       39 xadd.xsum29.                    xor                1.00 
+       40 xadd.xsum30.                    xor                1.00 
+       41 xadd.xsum31.                    xor                1.00 
+       42 xadd.xand1.                     and                1.00 
+       43 xadd.xand2.                     and                1.00 
+       44 xadd.xand3.                     and                1.00 
+       45 xadd.xand4.                     and                1.00 
+       46 xadd.xand5.                     and                1.00 
+       47 xadd.xand6.                     and                1.00 
+       48 xadd.xand7.                     and                1.00 
+       49 xadd.xand8.                     and                1.00 
+       50 xadd.xand9.                     and                1.00 
+       51 xadd.xand10.                    and                1.00 
+       52 xadd.xand11.                    and                1.00 
+       53 xadd.xand12.                    and                1.00 
+       54 xadd.xand13.                    and                1.00 
+       55 xadd.xand14.                    and                1.00 
+       56 xadd.xand15.                    and                1.00 
+       57 xadd.xand16.                    and                1.00 
+       58 xadd.xand17.                    and                1.00 
+       59 xadd.xand18.                    and                1.00 
+       60 xadd.xand19.                    and                1.00 
+       61 xadd.xand20.                    and                1.00 
+       62 xadd.xand21.                    and                1.00 
+       63 xadd.xand22.                    and                1.00 
+       64 xadd.xand23.                    and                1.00 
+       65 xadd.xand24.                    and                1.00 
+       66 xadd.xand25.                    and                1.00 
+       67 xadd.xand26.                    and                1.00 
+       68 xadd.xand27.                    and                1.00 
+       69 xadd.xand28.                    and                1.00 
+       70 xadd.xand29.                    and                1.00 
+       71 xadd.xand30.                    and                1.00 
+       72 xadd.xand31.                    and                1.00 
+       73 xadd.xand32.                    and                1.00 
+       74 xadd.xxor1.                     xor                1.00 
+       75 xadd.xxor2.                     xor                1.00 
+       76 xadd.xxor3.                     xor                1.00 
+       77 xadd.xxor4.                     xor                1.00 
+       78 xadd.xxor5.                     xor                1.00 
+       79 xadd.xxor6.                     xor                1.00 
+       80 xadd.xxor7.                     xor                1.00 
+       81 xadd.xxor8.                     xor                1.00 
+       82 xadd.xxor9.                     xor                1.00 
+       83 xadd.xxor10.                    xor                1.00 
+       84 xadd.xxor11.                    xor                1.00 
+       85 xadd.xxor12.                    xor                1.00 
+       86 xadd.xxor13.                    xor                1.00 
+       87 xadd.xxor14.                    xor                1.00 
+       88 xadd.xxor15.                    xor                1.00 
+       89 xadd.xxor16.                    xor                1.00 
+       90 xadd.xxor17.                    xor                1.00 
+       91 xadd.xxor18.                    xor                1.00 
+       92 xadd.xxor19.                    xor                1.00 
+       93 xadd.xxor20.                    xor                1.00 
+       94 xadd.xxor21.                    xor                1.00 
+       95 xadd.xxor22.                    xor                1.00 
+       96 xadd.xxor23.                    xor                1.00 
+       97 xadd.xxor24.                    xor                1.00 
+       98 xadd.xxor25.                    xor                1.00 
+       99 xadd.xxor26.                    xor                1.00 
+      100 xadd.xxor27.                    xor                1.00 
+      101 xadd.xxor28.                    xor                1.00 
+      102 xadd.xxor29.                    xor                1.00 
+      103 xadd.xxor30.                    xor                1.00 
+      104 xadd.xxor31.                    xor                1.00 
+      105 xadd.xxor32.                    xor                1.00 
+      106 xadd.xcell4_1.xcell1.           manchester_static_cell
+                                                                 1.00 
+      107 xadd.xcell4_1.xcell2.           manchester_static_cell
+                                                                 1.00 
+      108 xadd.xcell4_1.xcell3.           manchester_static_cell
+                                                                 1.00 
+      109 xadd.xcell4_1.xcell4.           manchester_static_cell
+                                                                 1.00 
+      110 xadd.xcell4_1.xinv1.            inv                1.00 
+      111 xadd.xcell4_1.xinv2.            inv                1.00 
+      112 xadd.xcell4_2.xcell1.           manchester_static_cell
+                                                                 1.00 
+      113 xadd.xcell4_2.xcell2.           manchester_static_cell
+                                                                 1.00 
+      114 xadd.xcell4_2.xcell3.           manchester_static_cell
+                                                                 1.00 
+      115 xadd.xcell4_2.xcell4.           manchester_static_cell
+                                                                 1.00 
+      116 xadd.xcell4_2.xinv1.            inv                1.00 
+      117 xadd.xcell4_2.xinv2.            inv                1.00 
+      118 xadd.xcell4_3.xcell1.           manchester_static_cell
+                                                                 1.00 
+      119 xadd.xcell4_3.xcell2.           manchester_static_cell
+                                                                 1.00 
+      120 xadd.xcell4_3.xcell3.           manchester_static_cell
+                                                                 1.00 
+      121 xadd.xcell4_3.xcell4.           manchester_static_cell
+                                                                 1.00 
+      122 xadd.xcell4_3.xinv1.            inv                1.00 
+      123 xadd.xcell4_3.xinv2.            inv                1.00 
+      124 xadd.xcell4_4.xcell1.           manchester_static_cell
+                                                                 1.00 
+      125 xadd.xcell4_4.xcell2.           manchester_static_cell
+                                                                 1.00 
+      126 xadd.xcell4_4.xcell3.           manchester_static_cell
+                                                                 1.00 
+      127 xadd.xcell4_4.xcell4.           manchester_static_cell
+                                                                 1.00 
+      128 xadd.xcell4_4.xinv1.            inv                1.00 
+      129 xadd.xcell4_4.xinv2.            inv                1.00 
+      130 xadd.xcell4_5.xcell1.           manchester_static_cell
+                                                                 1.00 
+      131 xadd.xcell4_5.xcell2.           manchester_static_cell
+                                                                 1.00 
+      132 xadd.xcell4_5.xcell3.           manchester_static_cell
+                                                                 1.00 
+      133 xadd.xcell4_5.xcell4.           manchester_static_cell
+                                                                 1.00 
+      134 xadd.xcell4_5.xinv1.            inv                1.00 
+      135 xadd.xcell4_5.xinv2.            inv                1.00 
+      136 xadd.xcell4_6.xcell1.           manchester_static_cell
+                                                                 1.00 
+      137 xadd.xcell4_6.xcell2.           manchester_static_cell
+                                                                 1.00 
+      138 xadd.xcell4_6.xcell3.           manchester_static_cell
+                                                                 1.00 
+      139 xadd.xcell4_6.xcell4.           manchester_static_cell
+                                                                 1.00 
+      140 xadd.xcell4_6.xinv1.            inv                1.00 
+      141 xadd.xcell4_6.xinv2.            inv                1.00 
+      142 xadd.xcell4_7.xcell1.           manchester_static_cell
+                                                                 1.00 
+      143 xadd.xcell4_7.xcell2.           manchester_static_cell
+                                                                 1.00 
+      144 xadd.xcell4_7.xcell3.           manchester_static_cell
+                                                                 1.00 
+      145 xadd.xcell4_7.xcell4.           manchester_static_cell
+                                                                 1.00 
+      146 xadd.xcell4_7.xinv1.            inv                1.00 
+      147 xadd.xcell4_7.xinv2.            inv                1.00 
+      148 xadd.xcell4_8.xcell1.           manchester_static_cell
+                                                                 1.00 
+      149 xadd.xcell4_8.xcell2.           manchester_static_cell
+                                                                 1.00 
+      150 xadd.xcell4_8.xcell3.           manchester_static_cell
+                                                                 1.00 
+      151 xadd.xcell4_8.xcell4.           manchester_static_cell
+                                                                 1.00 
+      152 xadd.xcell4_8.xinv1.            inv                1.00 
+      153 xadd.xcell4_8.xinv2.            inv                1.00 
+      154 xadd.xand1.xinv.                inv                1.00 
+      155 xadd.xand2.xinv.                inv                1.00 
+      156 xadd.xand3.xinv.                inv                1.00 
+      157 xadd.xand4.xinv.                inv                1.00 
+      158 xadd.xand5.xinv.                inv                1.00 
+      159 xadd.xand6.xinv.                inv                1.00 
+      160 xadd.xand7.xinv.                inv                1.00 
+      161 xadd.xand8.xinv.                inv                1.00 
+      162 xadd.xand9.xinv.                inv                1.00 
+      163 xadd.xand10.xinv.               inv                1.00 
+      164 xadd.xand11.xinv.               inv                1.00 
+      165 xadd.xand12.xinv.               inv                1.00 
+      166 xadd.xand13.xinv.               inv                1.00 
+      167 xadd.xand14.xinv.               inv                1.00 
+      168 xadd.xand15.xinv.               inv                1.00 
+      169 xadd.xand16.xinv.               inv                1.00 
+      170 xadd.xand17.xinv.               inv                1.00 
+      171 xadd.xand18.xinv.               inv                1.00 
+      172 xadd.xand19.xinv.               inv                1.00 
+      173 xadd.xand20.xinv.               inv                1.00 
+      174 xadd.xand21.xinv.               inv                1.00 
+      175 xadd.xand22.xinv.               inv                1.00 
+      176 xadd.xand23.xinv.               inv                1.00 
+      177 xadd.xand24.xinv.               inv                1.00 
+      178 xadd.xand25.xinv.               inv                1.00 
+      179 xadd.xand26.xinv.               inv                1.00 
+      180 xadd.xand27.xinv.               inv                1.00 
+      181 xadd.xand28.xinv.               inv                1.00 
+      182 xadd.xand29.xinv.               inv                1.00 
+      183 xadd.xand30.xinv.               inv                1.00 
+      184 xadd.xand31.xinv.               inv                1.00 
+      185 xadd.xand32.xinv.               inv                1.00 
+      186 xadd.xcell4_1.xcell1.xinv1.     inv                1.00 
+      187 xadd.xcell4_1.xcell1.xinv2.     inv                1.00 
+      188 xadd.xcell4_1.xcell2.xinv1.     inv                1.00 
+      189 xadd.xcell4_1.xcell2.xinv2.     inv                1.00 
+      190 xadd.xcell4_1.xcell3.xinv1.     inv                1.00 
+      191 xadd.xcell4_1.xcell3.xinv2.     inv                1.00 
+      192 xadd.xcell4_1.xcell4.xinv1.     inv                1.00 
+      193 xadd.xcell4_1.xcell4.xinv2.     inv                1.00 
+      194 xadd.xcell4_2.xcell1.xinv1.     inv                1.00 
+      195 xadd.xcell4_2.xcell1.xinv2.     inv                1.00 
+      196 xadd.xcell4_2.xcell2.xinv1.     inv                1.00 
+      197 xadd.xcell4_2.xcell2.xinv2.     inv                1.00 
+      198 xadd.xcell4_2.xcell3.xinv1.     inv                1.00 
+      199 xadd.xcell4_2.xcell3.xinv2.     inv                1.00 
+      200 xadd.xcell4_2.xcell4.xinv1.     inv                1.00 
+      201 xadd.xcell4_2.xcell4.xinv2.     inv                1.00 
+      202 xadd.xcell4_3.xcell1.xinv1.     inv                1.00 
+      203 xadd.xcell4_3.xcell1.xinv2.     inv                1.00 
+      204 xadd.xcell4_3.xcell2.xinv1.     inv                1.00 
+      205 xadd.xcell4_3.xcell2.xinv2.     inv                1.00 
+      206 xadd.xcell4_3.xcell3.xinv1.     inv                1.00 
+      207 xadd.xcell4_3.xcell3.xinv2.     inv                1.00 
+      208 xadd.xcell4_3.xcell4.xinv1.     inv                1.00 
+      209 xadd.xcell4_3.xcell4.xinv2.     inv                1.00 
+      210 xadd.xcell4_4.xcell1.xinv1.     inv                1.00 
+      211 xadd.xcell4_4.xcell1.xinv2.     inv                1.00 
+      212 xadd.xcell4_4.xcell2.xinv1.     inv                1.00 
+      213 xadd.xcell4_4.xcell2.xinv2.     inv                1.00 
+      214 xadd.xcell4_4.xcell3.xinv1.     inv                1.00 
+      215 xadd.xcell4_4.xcell3.xinv2.     inv                1.00 
+      216 xadd.xcell4_4.xcell4.xinv1.     inv                1.00 
+      217 xadd.xcell4_4.xcell4.xinv2.     inv                1.00 
+      218 xadd.xcell4_5.xcell1.xinv1.     inv                1.00 
+      219 xadd.xcell4_5.xcell1.xinv2.     inv                1.00 
+      220 xadd.xcell4_5.xcell2.xinv1.     inv                1.00 
+      221 xadd.xcell4_5.xcell2.xinv2.     inv                1.00 
+      222 xadd.xcell4_5.xcell3.xinv1.     inv                1.00 
+      223 xadd.xcell4_5.xcell3.xinv2.     inv                1.00 
+      224 xadd.xcell4_5.xcell4.xinv1.     inv                1.00 
+      225 xadd.xcell4_5.xcell4.xinv2.     inv                1.00 
+      226 xadd.xcell4_6.xcell1.xinv1.     inv                1.00 
+      227 xadd.xcell4_6.xcell1.xinv2.     inv                1.00 
+      228 xadd.xcell4_6.xcell2.xinv1.     inv                1.00 
+      229 xadd.xcell4_6.xcell2.xinv2.     inv                1.00 
+      230 xadd.xcell4_6.xcell3.xinv1.     inv                1.00 
+      231 xadd.xcell4_6.xcell3.xinv2.     inv                1.00 
+      232 xadd.xcell4_6.xcell4.xinv1.     inv                1.00 
+      233 xadd.xcell4_6.xcell4.xinv2.     inv                1.00 
+      234 xadd.xcell4_7.xcell1.xinv1.     inv                1.00 
+      235 xadd.xcell4_7.xcell1.xinv2.     inv                1.00 
+      236 xadd.xcell4_7.xcell2.xinv1.     inv                1.00 
+      237 xadd.xcell4_7.xcell2.xinv2.     inv                1.00 
+      238 xadd.xcell4_7.xcell3.xinv1.     inv                1.00 
+      239 xadd.xcell4_7.xcell3.xinv2.     inv                1.00 
+      240 xadd.xcell4_7.xcell4.xinv1.     inv                1.00 
+      241 xadd.xcell4_7.xcell4.xinv2.     inv                1.00 
+      242 xadd.xcell4_8.xcell1.xinv1.     inv                1.00 
+      243 xadd.xcell4_8.xcell1.xinv2.     inv                1.00 
+      244 xadd.xcell4_8.xcell2.xinv1.     inv                1.00 
+      245 xadd.xcell4_8.xcell2.xinv2.     inv                1.00 
+      246 xadd.xcell4_8.xcell3.xinv1.     inv                1.00 
+      247 xadd.xcell4_8.xcell3.xinv2.     inv                1.00 
+      248 xadd.xcell4_8.xcell4.xinv1.     inv                1.00 
+      249 xadd.xcell4_8.xcell4.xinv2.     inv                1.00 
+1****** HSPICE -- J-2014.09-SP2-2 64-BIT (Apr 17 2015) win64 ******             
+ ******  
+ *** adder32 using static manchester carry adder ***
+
+ ****** mos   model parameters tnom=  25.000 temp=  25.000 ******
+ Model Name: nmos  
+ BSIM4 Model (Level 54)
+    MOBMOD = 0
+    BINUNIT = 1
+    PARAMCHK = 1
+    CAPMOD = 2
+    DIOMOD = 1
+    RDSMOD = 0
+    TRNQSMOD = 0
+    ACNQSMOD = 0
+    RBODYMOD = 1
+    RGATEMOD = 1
+    PERMOD = 1
+    GEOMOD = 1
+    RGEOMOD = 0
+    FNOIMOD = 1
+    TNOIMOD = 0
+    IGCMOD = 1
+    IGBMOD = 1
+    STIMOD = 0
+    VERSION =      4 
+    TOXREF = 2.05e-009 
+    TOXE = 2.05e-009 
+    TOXP = 1.4e-009 
+    TOXM = 2.05e-009 
+    DTOX = 6.5e-010 
+    EPSROX =    3.9 
+    CDSC = 0.0002 
+    CDSCB =      0 
+    CDSCD =      0 
+    CIT =      0 
+    NFACTOR =    1.7 
+    XJ = 2.8e-008 
+    VSAT = 1.138e+005 
+    A0 =      1 
+    AGS = 1e-020 
+    A1 =      0 
+    A2 =      1 
+    AT = 3.3e+004 
+    KETA =   0.04 
+    NSUB = 6e+016 
+    NDEP = 1.94e+018 
+    NSD = 2e+020 
+    NGATE = 2e+020 
+    GAMMA1 =      0 
+    GAMMA2 =      0 
+    VBX =      0 
+    VBM =     -3 
+    XT = 1.55e-007 
+    K1 =    0.4 
+    KT1 =  -0.11 
+    KT1L =      0 
+    KT2 =  0.022 
+    K2 =   0.01 
+    K3 =      0 
+    K3B =      0 
+    LPE0 =      0 
+    LPEB =      0 
+    DVTP0 = 1.2e-009 
+    DVTP1 =    0.1 
+    W0 = 2.5e-006 
+    DVT0 =      1 
+    DVT1 =      2 
+    DVT2 = -0.032 
+    DVT0W =      0 
+    DVT1W =      0 
+    DVT2W =      0 
+    DROUT =    0.5 
+    DSUB =    0.1 
+    VTH0 =  0.397 
+    EU =   1.67 
+    UA = 6e-010 
+    UA1 = 4.31e-009 
+    UB = 1.2e-018 
+    UB1 = 7.61e-018 
+    UC = -3e-011 
+    UC1 = -5.6e-011 
+    U0 = 0.0547 
+    UTE =   -1.5 
+    VOFF =  -0.13 
+    VOFFL =      0 
+    MINV =   0.05 
+    FPROUT =    0.2 
+    PDITS =   0.08 
+    PDITSD =   0.23 
+    PDITSL = 2.3e+006 
+    DELTA =   0.01 
+    RDSW =    180 
+    RDSWMIN =      0 
+    RDWMIN =      0 
+    RSWMIN =      0 
+    RDW =     90 
+    RSW =     90 
+    PRWG =      0 
+    PRWB = 6.8e-011 
+    PRT =      0 
+    ETA0 = 0.0074 
+    ETAB =      0 
+    PCLM =   0.06 
+    PDIBLC1 =  0.001 
+    PDIBLC2 =  0.001 
+    PDIBLCB = -0.005 
+    PSCBE1 = 8.14e+008 
+    PSCBE2 = 1e-007 
+    PVAG = 1e-020 
+    WR =      1 
+    DWG =      0 
+    DWB =      0 
+    XW =      0 
+    XWREF =      0 
+    XL = -4e-008 
+    XLREF = -4e-008 
+    B0 = -1e-020 
+    B1 =      0 
+    ALPHA0 =  0.074 
+    ALPHA1 =  0.005 
+    AGIDL = 0.0002 
+    BGIDL = 2.1e+009 
+    CGIDL = 0.0002 
+    PHIN =      0 
+    EGIDL =    0.8 
+    AIGC =  0.012 
+    BIGC = 0.0028 
+    CIGC =  0.002 
+    AIGSD =  0.012 
+    BIGSD = 0.0028 
+    CIGSD =  0.002 
+    AIGBACC =  0.012 
+    BIGBACC = 0.0028 
+    CIGBACC =  0.002 
+    AIGBINV =  0.014 
+    BIGBINV =  0.004 
+    CIGBINV =  0.004 
+    NIGC =      1 
+    NIGBINV =      3 
+    NIGBACC =      1 
+    NTOX =      1 
+    EIGBINV =    1.1 
+    PIGCD =      1 
+    POXEDGE =      1 
+    XRCRG1 =     12 
+    TNOIA =    1.5 
+    TNOIB =    3.5 
+    NTNOI =      1 
+    XRCRG2 =      5 
+    BETA0 =     30 
+    IJTHDFWD =   0.01 
+    IJTHSFWD =   0.01 
+    IJTHDREV =  0.001 
+    IJTHSREV =  0.001 
+    XJBVD =      1 
+    XJBVS =      1 
+    BVD =     10 
+    BVS =     10 
+    VFB =  -0.55 
+    GBMIN = 1e-010 
+    RBDB =     15 
+    RBPB =      5 
+    RBSB =     15 
+    RBPS =     15 
+    RBPD =     15 
+    CGSL = 2.653e-010 
+    CGDL = 2.653e-010 
+    CKAPPAS =   0.03 
+    CKAPPAD =   0.03 
+    CF = 1.16e-010 
+    CLC = 1e-007 
+    CLE =    0.6 
+    DWC = 5e-009 
+    DLC = 7.5e-009 
+    DLCIG = 7.5e-009 
+    DWJ =      0 
+    VFBCV =     -1 
+    ACDE =      1 
+    MOIN =     15 
+    NOFF =    0.9 
+    VOFFCV =   0.02 
+    DMCG =      0 
+    DMCI =      0 
+    DMDG =      0 
+    DMCGT =      0 
+    XGW =      0 
+    XGL =      0 
+    RSHG =    0.4 
+    NGCON =      1 
+    TCJ =  0.001 
+    TPB =  0.005 
+    TCJSW =  0.001 
+    TPBSW =  0.005 
+    TCJSWG =  0.001 
+    TPBSWG =  0.005 
+    SK0 =      0 
+    SK1 =      0 
+    SK2 =      0 
+    SL = 2e-006 
+    SW = 2e-006 
+    K =      0 
+    TNOM =  300.1 
+    CGSO = 1.9e-010 
+    CGDO = 1.9e-010 
+    CGBO = 2.56e-011 
+    XPART =      0 
+    RSH =      5 
+    JSS = 0.0001 
+    JSWS = 1e-011 
+    JSWGS = 1e-010 
+    PBS =      1 
+    MJS =    0.5 
+    PBSWS =      1 
+    MJSWS =   0.33 
+    CJS = 0.0005 
+    CJSWS = 5e-010 
+    NJS =      1 
+    PBSWGS =      1 
+    MJSWGS =   0.33 
+    CJSWGS = 3e-010 
+    XTIS =      3 
+    JSD = 0.0001 
+    JSWD = 1e-011 
+    JSWGD = 1e-010 
+    PBD =      1 
+    MJD =    0.5 
+    PBSWD =      1 
+    MJSWD =   0.33 
+    CJD = 0.0005 
+    CJSWD = 5e-010 
+    NJD =      1 
+    PBSWGD =      1 
+    MJSWGD =   0.33 
+    CJSWGD = 5e-010 
+    XTID =      3 
+    LMLT =      1 
+    WMLT =      1 
+    LINT = 7.5e-009 
+    LL =      0 
+    LLC =      0 
+    LLN =      1 
+    LW =      0 
+    LWC =      0 
+    LWN =      1 
+    LWL =      0 
+    LWLC =      0 
+    LMIN =      0 
+    LMAX =      1 
+    WINT = 5e-009 
+    WL =      0 
+    WLC =      0 
+    WLN =      1 
+    WW =      0 
+    WWC =      0 
+    WWN =      1 
+    WWL =      0 
+    WWLC =      0 
+    WMIN =      0 
+    WMAX =      1 
+    NOIA = 6.25e+041 
+    NOIB = 3.125e+026 
+    NOIC = 8.75e+009 
+    EM = 4.1e+007 
+    EF =      1 
+    AF =      1 
+    KF =      0 
+    TRS =      0 
+    TRD =      0 
+ Model Name: pmos  
+ BSIM4 Model (Level 54)
+    MOBMOD = 0
+    BINUNIT = 1
+    PARAMCHK = 1
+    CAPMOD = 2
+    DIOMOD = 1
+    RDSMOD = 0
+    TRNQSMOD = 0
+    ACNQSMOD = 0
+    RBODYMOD = 1
+    RGATEMOD = 1
+    PERMOD = 1
+    GEOMOD = 1
+    RGEOMOD = 0
+    FNOIMOD = 1
+    TNOIMOD = 0
+    IGCMOD = 1
+    IGBMOD = 1
+    STIMOD = 0
+    VERSION =      4 
+    TOXREF = 2.15e-009 
+    TOXE = 2.15e-009 
+    TOXP = 1.4e-009 
+    TOXM = 2.15e-009 
+    DTOX = 7.5e-010 
+    EPSROX =    3.9 
+    CDSC = 0.000258 
+    CDSCB =      0 
+    CDSCD = 6.1e-008 
+    CIT =      0 
+    NFACTOR =    1.7 
+    XJ = 2.8e-008 
+    VSAT = 7e+004 
+    A0 =      1 
+    AGS = 1e-020 
+    A1 =      0 
+    A2 =      1 
+    AT = 3.3e+004 
+    KETA = -0.047 
+    NSUB = 6e+016 
+    NDEP = 1.43e+018 
+    NSD = 2e+020 
+    NGATE = 2e+020 
+    GAMMA1 =      0 
+    GAMMA2 =      0 
+    VBX =      0 
+    VBM =     -3 
+    XT = 1.55e-007 
+    K1 =    0.4 
+    KT1 =  -0.11 
+    KT1L =      0 
+    KT2 =  0.022 
+    K2 =  -0.01 
+    K3 =      0 
+    K3B =      0 
+    LPE0 =      0 
+    LPEB =      0 
+    DVTP0 = 1e-009 
+    DVTP1 =   0.05 
+    W0 = 2.5e-006 
+    DVT0 =      1 
+    DVT1 =      2 
+    DVT2 = -0.032 
+    DVT0W =      0 
+    DVT1W =      0 
+    DVT2W =      0 
+    DROUT =   0.56 
+    DSUB =    0.1 
+    VTH0 = -0.339 
+    EU =      1 
+    UA = 2e-009 
+    UA1 = 4.31e-009 
+    UB = 5e-019 
+    UB1 = 7.61e-018 
+    UC = -3e-011 
+    UC1 = -5.6e-011 
+    U0 = 0.00711 
+    UTE =   -1.5 
+    VOFF = -0.126 
+    VOFFL =      0 
+    MINV =   0.05 
+    FPROUT =    0.2 
+    PDITS =   0.08 
+    PDITSD =   0.23 
+    PDITSL = 2.3e+006 
+    DELTA =   0.01 
+    RDSW =    200 
+    RDSWMIN =      0 
+    RDWMIN =      0 
+    RSWMIN =      0 
+    RDW =    100 
+    RSW =    100 
+    PRWG = 3.22e-008 
+    PRWB = 6.8e-011 
+    PRT =      0 
+    ETA0 = 0.0074 
+    ETAB =      0 
+    PCLM =   0.12 
+    PDIBLC1 =  0.001 
+    PDIBLC2 =  0.001 
+    PDIBLCB = 3.4e-008 
+    PSCBE1 = 8.14e+008 
+    PSCBE2 = 9.58e-007 
+    PVAG = 1e-020 
+    WR =      1 
+    DWG =      0 
+    DWB =      0 
+    XW =      0 
+    XWREF =      0 
+    XL = -4e-008 
+    XLREF = -4e-008 
+    B0 =      0 
+    B1 =      0 
+    ALPHA0 =  0.074 
+    ALPHA1 =  0.005 
+    AGIDL = 0.0002 
+    BGIDL = 2.1e+009 
+    CGIDL = 0.0002 
+    PHIN =      0 
+    EGIDL =    0.8 
+    AIGC =   0.69 
+    BIGC = 0.0012 
+    CIGC = 0.0008 
+    AIGSD = 0.0087 
+    BIGSD = 0.0012 
+    CIGSD = 0.0008 
+    AIGBACC =  0.012 
+    BIGBACC = 0.0028 
+    CIGBACC =  0.002 
+    AIGBINV =  0.014 
+    BIGBINV =  0.004 
+    CIGBINV =  0.004 
+    NIGC =      1 
+    NIGBINV =      3 
+    NIGBACC =      1 
+    NTOX =      1 
+    EIGBINV =    1.1 
+    PIGCD =      1 
+    POXEDGE =      1 
+    XRCRG1 =     12 
+    TNOIA =    1.5 
+    TNOIB =    3.5 
+    NTNOI =      1 
+    XRCRG2 =      5 
+    BETA0 =     30 
+    IJTHDFWD =   0.01 
+    IJTHSFWD =   0.01 
+    IJTHDREV =  0.001 
+    IJTHSREV =  0.001 
+    XJBVD =      1 
+    XJBVS =      1 
+    BVD =     10 
+    BVS =     10 
+    VFB =   0.55 
+    GBMIN = 1e-010 
+    RBDB =     15 
+    RBPB =      5 
+    RBSB =     15 
+    RBPS =     15 
+    RBPD =     15 
+    CGSL = 2.653e-010 
+    CGDL = 2.653e-010 
+    CKAPPAS =   0.03 
+    CKAPPAD =   0.03 
+    CF = 1.15e-010 
+    CLC = 1e-007 
+    CLE =    0.6 
+    DWC = 5e-009 
+    DLC = 7.5e-009 
+    DLCIG = 7.5e-009 
+    DWJ =      0 
+    VFBCV =     -1 
+    ACDE =      1 
+    MOIN =     15 
+    NOFF =    0.9 
+    VOFFCV =   0.02 
+    DMCG =      0 
+    DMCI =      0 
+    DMDG =      0 
+    DMCGT =      0 
+    XGW =      0 
+    XGL =      0 
+    RSHG =    0.4 
+    NGCON =      1 
+    TCJ =  0.001 
+    TPB =  0.005 
+    TCJSW =  0.001 
+    TPBSW =  0.005 
+    TCJSWG =  0.001 
+    TPBSWG =  0.005 
+    SK0 =      0 
+    SK1 =      0 
+    SK2 =      0 
+    SL = 2e-006 
+    SW = 2e-006 
+    K =      0 
+    TNOM =  300.1 
+    CGSO = 1.8e-010 
+    CGDO = 1.8e-010 
+    CGBO = 2.56e-011 
+    XPART =      0 
+    RSH =      5 
+    JSS = 0.0001 
+    JSWS = 1e-011 
+    JSWGS = 1e-010 
+    PBS =      1 
+    MJS =    0.5 
+    PBSWS =      1 
+    MJSWS =   0.33 
+    CJS = 0.0005 
+    CJSWS = 5e-010 
+    NJS =      1 
+    PBSWGS =      1 
+    MJSWGS =   0.33 
+    CJSWGS = 3e-010 
+    XTIS =      3 
+    JSD = 0.0001 
+    JSWD = 1e-011 
+    JSWGD = 1e-010 
+    PBD =      1 
+    MJD =    0.5 
+    PBSWD =      1 
+    MJSWD =   0.33 
+    CJD = 0.0005 
+    CJSWD = 5e-010 
+    NJD =      1 
+    PBSWGD =      1 
+    MJSWGD =   0.33 
+    CJSWGD = 5e-010 
+    XTID =      3 
+    LMLT =      1 
+    WMLT =      1 
+    LINT = 7.5e-009 
+    LL =      0 
+    LLC =      0 
+    LLN =      1 
+    LW =      0 
+    LWC =      0 
+    LWN =      1 
+    LWL =      0 
+    LWLC =      0 
+    LMIN =      0 
+    LMAX =      1 
+    WINT = 5e-009 
+    WL =      0 
+    WLC =      0 
+    WLN =      1 
+    WW =      0 
+    WWC =      0 
+    WWN =      1 
+    WWL =      0 
+    WWLC =      0 
+    WMIN =      0 
+    WMAX =      1 
+    NOIA = 6.188e+040 
+    NOIB = 1.5e+025 
+    NOIC = 8.75e+009 
+    EM = 4.1e+007 
+    EF =      1 
+    AF =      1 
+    KF =      0 
+    TRS =      0 
+    TRD =      0 
+  **info** (adder32.sp:15) DC voltage reset to initial transient source value              in source        0:va0                 new dc=  0.0000D+00
+ **warning** (nmos:mn1) Warning:  Acde = 0.318645 may be too small in BSIM4 model with w=2e-007 l=9e-008.
+
+ **warning** Node specified unrecognized for element     0:s31              branch; output ignored
+
+
+ **warning** Node specified unrecognized for element     0:c30              branch; output ignored
+
+
+ **warning** Node specified unrecognized for element     0:s0               branch; output ignored
+
+  
+      
+ **info** set option symb=1 internally to help for convergence.
+ *****************************************************************
+ ******  option summary
+ ******
+ runlvl  = 3         bypass  = 2         
+  Opening plot unit= 79
+ file=adder32.pa0
+
+ **info** dc convergence successful at Newton-Raphson method 
+1****** HSPICE -- J-2014.09-SP2-2 64-BIT (Apr 17 2015) win64 ******             
+ ******  
+ *** adder32 using static manchester carry adder ***
+
+ ****** operating point information tnom=  25.000 temp=  25.000 ******
+ ****** operating point status is voltage   simulation time is     0.     
+      node    =voltage        node    =voltage        node    =voltage
+
+ +  0:a0      =   0.        0:a1      =   0.        0:a10     =   0.     
+ +  0:a11     =   0.        0:a12     =   0.        0:a13     =   0.     
+ +  0:a14     =   0.        0:a15     =   0.        0:a16     =   0.     
+ +  0:a17     =   0.        0:a18     =   0.        0:a19     =   0.     
+ +  0:a2      =   0.        0:a20     =   0.        0:a21     =   0.     
+ +  0:a22     =   0.        0:a23     =   0.        0:a24     =   0.     
+ +  0:a25     =   0.        0:a26     =   0.        0:a27     =   0.     
+ +  0:a28     =   0.        0:a29     =   0.        0:a3      =   0.     
+ +  0:a30     =   0.        0:a31     =   0.        0:a4      =   0.     
+ +  0:a5      =   0.        0:a6      =   0.        0:a7      =   0.     
+ +  0:a8      =   0.        0:a9      =   0.        0:b0      =   1.0000 
+ +  0:b1      =   1.0000    0:b10     =   1.0000    0:b11     =   1.0000 
+ +  0:b12     =   1.0000    0:b13     =   1.0000    0:b14     =   1.0000 
+ +  0:b15     =   1.0000    0:b16     =   1.0000    0:b17     =   1.0000 
+ +  0:b18     =   1.0000    0:b19     =   1.0000    0:b2      =   1.0000 
+ +  0:b20     =   1.0000    0:b21     =   1.0000    0:b22     =   1.0000 
+ +  0:b23     =   1.0000    0:b24     =   1.0000    0:b25     =   1.0000 
+ +  0:b26     =   1.0000    0:b27     =   1.0000    0:b28     =   1.0000 
+ +  0:b29     =   1.0000    0:b3      =   1.0000    0:b30     =   1.0000 
+ +  0:b31     =   0.        0:b4      =   1.0000    0:b5      =   1.0000 
+ +  0:b6      =   1.0000    0:b7      =   1.0000    0:b8      =   1.0000 
+ +  0:b9      =   1.0000    0:c31     =  21.5277u   0:s0      = 999.9033m
+ +  0:s1      = 999.9033m   0:s10     = 999.9034m   0:s11     = 999.9034m
+ +  0:s12     = 999.9034m   0:s13     = 999.9034m   0:s14     = 999.9034m
+ +  0:s15     = 999.9034m   0:s16     = 999.9034m   0:s17     = 999.9034m
+ +  0:s18     = 999.9034m   0:s19     = 999.9034m   0:s2      = 999.9034m
+ +  0:s20     = 999.9034m   0:s21     = 999.9034m   0:s22     = 999.9034m
+ +  0:s23     = 999.9034m   0:s24     = 999.9034m   0:s25     = 999.9034m
+ +  0:s26     = 999.9034m   0:s27     = 999.9034m   0:s28     = 999.9033m
+ +  0:s29     = 999.9034m   0:s3      = 999.9034m   0:s30     = 999.9034m
+ +  0:s31     = 354.0553u   0:s4      = 999.9034m   0:s5      = 999.9034m
+ +  0:s6      = 999.9034m   0:s7      = 999.9034m   0:s8      = 999.9034m
+ +  0:s9      = 999.9034m   0:vdd     =   1.0000    1:c0      = 138.1859u
+ +  1:c1      = 235.9976u   1:c10     = 475.9248u   1:c11     = 182.8833u
+ +  1:c12     = 320.8616u   1:c13     = 418.5309u   1:c14     = 475.9248u
+ +  1:c15     = 182.8833u   1:c16     = 320.8616u   1:c17     = 418.5309u
+ +  1:c18     = 475.9248u   1:c19     = 182.8833u   1:c2      = 293.4688u
+ +  1:c20     = 320.8616u   1:c21     = 418.5309u   1:c22     = 475.9248u
+ +  1:c23     = 182.8833u   1:c24     = 320.8616u   1:c25     = 418.5309u
+ +  1:c26     = 475.9248u   1:c27     = 150.5782u   1:c28     = 256.2368u
+ +  1:c29     = 321.5622u   1:c3      = 182.8833u   1:c30     = 346.5782u
+ +  1:c4      = 320.8616u   1:c5      = 418.5309u   1:c6      = 475.9248u
+ +  1:c7      = 182.8833u   1:c8      = 320.8616u   1:c9      = 418.5309u
+ +  1:g0      =  21.7240u   1:g1      =  21.7240u   1:g10     =  21.7240u
+ +  1:g11     =  21.7240u   1:g12     =  21.7240u   1:g13     =  21.7240u
+ +  1:g14     =  21.7240u   1:g15     =  21.7240u   1:g16     =  21.7240u
+ +  1:g17     =  21.7240u   1:g18     =  21.7240u   1:g19     =  21.7240u
+ +  1:g2      =  21.7240u   1:g20     =  21.7240u   1:g21     =  21.7240u
+ +  1:g22     =  21.7240u   1:g23     =  21.7240u   1:g24     =  21.7240u
+ +  1:g25     =  21.7240u   1:g26     =  21.7240u   1:g27     =  21.7240u
+ +  1:g28     =  21.7240u   1:g29     =  21.7240u   1:g3      =  21.7240u
+ +  1:g30     =  21.7240u   1:g31     =  21.7189u   1:g4      =  21.7240u
+ +  1:g5      =  21.7240u   1:g6      =  21.7240u   1:g7      =  21.7240u
+ +  1:g8      =  21.7240u   1:g9      =  21.7240u   1:p0      = 999.9405m
+ +  1:p1      = 999.9405m   1:p10     = 999.9406m   1:p11     = 999.9406m
+ +  1:p12     = 999.9405m   1:p13     = 999.9406m   1:p14     = 999.9406m
+ +  1:p15     = 999.9406m   1:p16     = 999.9405m   1:p17     = 999.9406m
+ +  1:p18     = 999.9406m   1:p19     = 999.9406m   1:p2      = 999.9406m
+ +  1:p20     = 999.9405m   1:p21     = 999.9406m   1:p22     = 999.9406m
+ +  1:p23     = 999.9406m   1:p24     = 999.9405m   1:p25     = 999.9406m
+ +  1:p26     = 999.9406m   1:p27     = 999.9406m   1:p28     = 999.9405m
+ +  1:p29     = 999.9406m   1:p3      = 999.9406m   1:p30     = 999.9406m
+ +  1:p31     =   7.8885u   1:p4      = 999.9405m   1:p5      = 999.9406m
+ +  1:p6      = 999.9406m   1:p7      = 999.9406m   1:p8      = 999.9405m
+ +  1:p9      = 999.9406m   2:c4_temp = 310.6209u   2:c4_temp1= 999.9925m
+ +  3:c4_temp = 493.0645u   3:c4_temp1= 999.9925m   4:c4_temp = 493.0645u
+ +  4:c4_temp1= 999.9925m   5:c4_temp = 493.0645u   5:c4_temp1= 999.9925m
+ +  6:c4_temp = 493.0645u   6:c4_temp1= 999.9925m   7:c4_temp = 493.0645u
+ +  7:c4_temp1= 999.9925m   8:c4_temp = 493.0645u   8:c4_temp1= 999.9925m
+ +  9:c4_temp =  33.5648u   9:c4_temp1= 999.9926m  10:net1    =  23.4793u
+ + 11:net1    =  23.5052u  12:net1    =  23.5237u  13:net1    =  23.5345u
+ + 14:net1    =  23.5137u  15:net1    =  23.5397u  16:net1    =  23.5582u
+ + 17:net1    =  23.5691u  18:net1    =  23.5137u  19:net1    =  23.5397u
+ + 20:net1    =  23.5582u  21:net1    =  23.5691u  22:net1    =  23.5137u
+ + 23:net1    =  23.5397u  24:net1    =  23.5582u  25:net1    =  23.5691u
+ + 26:net1    =  23.5137u  27:net1    =  23.5397u  28:net1    =  23.5582u
+ + 29:net1    =  23.5691u  30:net1    =  23.5137u  31:net1    =  23.5397u
+ + 32:net1    =  23.5582u  33:net1    =  23.5691u  34:net1    =  23.5137u
+ + 35:net1    =  23.5397u  36:net1    =  23.5582u  37:net1    =  23.5691u
+ + 38:net1    =  23.5076u  39:net1    =  23.5275u  40:net1    =  23.5398u
+ + 41:net1    = 999.9812m  42:c_bar   = 999.9901m  42:spot1   =   7.4966u
+ + 43:c_bar   = 999.9901m  43:spot1   =   7.4966u  44:c_bar   = 999.9901m
+ + 44:spot1   =   7.4966u  45:c_bar   = 999.9901m  45:spot1   =   7.4966u
+ + 46:c_bar   = 999.9901m  46:spot1   =   7.4966u  47:c_bar   = 999.9901m
+ + 47:spot1   =   7.4966u  48:c_bar   = 999.9901m  48:spot1   =   7.4966u
+ + 49:c_bar   = 999.9901m  49:spot1   =   7.4966u  50:c_bar   = 999.9901m
+ + 50:spot1   =   7.4966u  51:c_bar   = 999.9901m  51:spot1   =   7.4966u
+ + 52:c_bar   = 999.9901m  52:spot1   =   7.4966u  53:c_bar   = 999.9901m
+ + 53:spot1   =   7.4966u  54:c_bar   = 999.9901m  54:spot1   =   7.4966u
+ + 55:c_bar   = 999.9901m  55:spot1   =   7.4966u  56:c_bar   = 999.9901m
+ + 56:spot1   =   7.4966u  57:c_bar   = 999.9901m  57:spot1   =   7.4966u
+ + 58:c_bar   = 999.9901m  58:spot1   =   7.4966u  59:c_bar   = 999.9901m
+ + 59:spot1   =   7.4966u  60:c_bar   = 999.9901m  60:spot1   =   7.4966u
+ + 61:c_bar   = 999.9901m  61:spot1   =   7.4966u  62:c_bar   = 999.9901m
+ + 62:spot1   =   7.4966u  63:c_bar   = 999.9901m  63:spot1   =   7.4966u
+ + 64:c_bar   = 999.9901m  64:spot1   =   7.4966u  65:c_bar   = 999.9901m
+ + 65:spot1   =   7.4966u  66:c_bar   = 999.9901m  66:spot1   =   7.4966u
+ + 67:c_bar   = 999.9901m  67:spot1   =   7.4966u  68:c_bar   = 999.9901m
+ + 68:spot1   =   7.4966u  69:c_bar   = 999.9901m  69:spot1   =   7.4966u
+ + 70:c_bar   = 999.9901m  70:spot1   =   7.4966u  71:c_bar   = 999.9901m
+ + 71:spot1   =   7.4966u  72:c_bar   = 999.9901m  72:spot1   =   7.4966u
+ + 73:c_bar   = 999.9990m  73:spot1   =  68.3656m  74:net1    = 999.9911m
+ + 75:net1    = 999.9911m  76:net1    = 999.9911m  77:net1    = 999.9911m
+ + 78:net1    = 999.9911m  79:net1    = 999.9911m  80:net1    = 999.9911m
+ + 81:net1    = 999.9911m  82:net1    = 999.9911m  83:net1    = 999.9911m
+ + 84:net1    = 999.9911m  85:net1    = 999.9911m  86:net1    = 999.9911m
+ + 87:net1    = 999.9911m  88:net1    = 999.9911m  89:net1    = 999.9911m
+ + 90:net1    = 999.9911m  91:net1    = 999.9911m  92:net1    = 999.9911m
+ + 93:net1    = 999.9911m  94:net1    = 999.9911m  95:net1    = 999.9911m
+ + 96:net1    = 999.9911m  97:net1    = 999.9911m  98:net1    = 999.9911m
+ + 99:net1    = 999.9911m 100:net1    = 999.9911m 101:net1    = 999.9911m
+ +102:net1    = 999.9911m 103:net1    = 999.9911m 104:net1    = 999.9911m
+ +105:net1    = 999.9811m 106:g_bar   = 999.9926m 106:p_bar   =  21.5571u
+ +106:spot1   = 138.5814u 107:g_bar   = 999.9926m 107:p_bar   =  21.5571u
+ +107:spot1   = 236.3908u 108:g_bar   = 999.9926m 108:p_bar   =  21.5571u
+ +108:spot1   = 293.8607u 109:g_bar   = 999.9926m 109:p_bar   =  21.5571u
+ +109:spot1   = 311.0124u 112:g_bar   = 999.9926m 112:p_bar   =  21.5571u
+ +112:spot1   = 321.2528u 113:g_bar   = 999.9926m 113:p_bar   =  21.5571u
+ +113:spot1   = 418.9199u 114:g_bar   = 999.9926m 114:p_bar   =  21.5571u
+ +114:spot1   = 476.3124u 115:g_bar   = 999.9926m 115:p_bar   =  21.5571u
+ +115:spot1   = 493.4518u 118:g_bar   = 999.9926m 118:p_bar   =  21.5571u
+ +118:spot1   = 321.2528u 119:g_bar   = 999.9926m 119:p_bar   =  21.5571u
+ +119:spot1   = 418.9199u 120:g_bar   = 999.9926m 120:p_bar   =  21.5571u
+ +120:spot1   = 476.3125u 121:g_bar   = 999.9926m 121:p_bar   =  21.5571u
+ +121:spot1   = 493.4518u 124:g_bar   = 999.9926m 124:p_bar   =  21.5571u
+ +124:spot1   = 321.2528u 125:g_bar   = 999.9926m 125:p_bar   =  21.5571u
+ +125:spot1   = 418.9199u 126:g_bar   = 999.9926m 126:p_bar   =  21.5571u
+ +126:spot1   = 476.3125u 127:g_bar   = 999.9926m 127:p_bar   =  21.5571u
+ +127:spot1   = 493.4518u 130:g_bar   = 999.9926m 130:p_bar   =  21.5571u
+ +130:spot1   = 321.2528u 131:g_bar   = 999.9926m 131:p_bar   =  21.5571u
+ +131:spot1   = 418.9199u 132:g_bar   = 999.9926m 132:p_bar   =  21.5571u
+ +132:spot1   = 476.3125u 133:g_bar   = 999.9926m 133:p_bar   =  21.5571u
+ +133:spot1   = 493.4518u 136:g_bar   = 999.9926m 136:p_bar   =  21.5571u
+ +136:spot1   = 321.2528u 137:g_bar   = 999.9926m 137:p_bar   =  21.5571u
+ +137:spot1   = 418.9199u 138:g_bar   = 999.9926m 138:p_bar   =  21.5571u
+ +138:spot1   = 476.3125u 139:g_bar   = 999.9926m 139:p_bar   =  21.5571u
+ +139:spot1   = 493.4518u 142:g_bar   = 999.9926m 142:p_bar   =  21.5571u
+ +142:spot1   = 321.2528u 143:g_bar   = 999.9926m 143:p_bar   =  21.5571u
+ +143:spot1   = 418.9199u 144:g_bar   = 999.9926m 144:p_bar   =  21.5571u
+ +144:spot1   = 476.3125u 145:g_bar   = 999.9926m 145:p_bar   =  21.5571u
+ +145:spot1   = 493.4518u 148:g_bar   = 999.9926m 148:p_bar   =  21.5571u
+ +148:spot1   = 256.6295u 149:g_bar   = 999.9926m 149:p_bar   =  21.5571u
+ +149:spot1   = 321.9534u 150:g_bar   = 999.9926m 150:p_bar   =  21.5571u
+ +150:spot1   = 346.9688u 151:g_bar   = 999.9926m 151:p_bar   = 999.9926m
+ +151:spot1   =  17.1809u
+
+ ******  
+ *** adder32 using static manchester carry adder ***
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ t1=  75.0000p
+ t2=   1.7554n
+ td=   1.6804n
+ power= 201.5237u  from=  75.0000p     to=   1.7554n
+
+          ***** job concluded
+1****** HSPICE -- J-2014.09-SP2-2 64-BIT (Apr 17 2015) win64 ******             
+ ******  
+ *** adder32 using static manchester carry adder ***
+
+ ****** job statistics summary tnom=  25.000 temp=  25.000 ******
+
+  ******  HSPICE Threads Information  ******
+
+  Command Line Threads Count :     1
+  Available CPU Count        :     8
+  Actual Threads Count       :     1
+
+
+  ******  Circuit Statistics  ******
+  # nodes       =    4018 # elements   =     993
+  # resistors   =       0 # capacitors =      32 # inductors   =       0
+  # mutual_inds =       0 # vccs       =       0 # vcvs        =       0
+  # cccs        =       0 # ccvs       =       0 # volt_srcs   =      65
+  # curr_srcs   =       0 # diodes     =       0 # bjts        =       0
+  # jfets       =       0 # mosfets    =     896 # U elements  =       0
+  # T elements  =       0 # W elements =       0 # B elements  =       0
+  # S elements  =       0 # P elements =       0 # va device   =       0
+  # vector_srcs =       0 # N elements =       0
+
+
+  ******  Runtime Statistics (seconds)  ******
+
+  analysis           time    # points   tot. iter  conv.iter
+  op point           0.04           1          11
+  transient          0.37          31         389         123 rev=         9
+  readin             0.02
+  errchk             0.03
+  setup              0.02
+  output             0.00
+
+
+           peak memory used         51.63 megabytes
+           total cpu time            0.48 seconds
+           total elapsed time        0.52 seconds
+           job started at     22:17:50 01/05/2023
+           job ended   at     22:17:51 01/05/2023
+
+
+  lic: Release hspice token(s) 
+ lic: total license checkout elapse time:        0.03(s)

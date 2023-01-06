@@ -1,0 +1,6 @@
+$DATA1 SOURCE='HSPICE' VERSION='J-2014.09-SP2-2 64-BIT'
+.TITLE '*** adder32 using static manchester carry adder ***'
+ t1               t2               td               power           
+ temper           alter#          
+  7.500e-011       1.755e-009       1.680e-009       2.015e-004     
+   25.0000        1               
